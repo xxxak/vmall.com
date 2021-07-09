@@ -1,0 +1,383 @@
+/*
+html, body, div, dl, dt, dd, ul,
+ ol, li, h1, h2, h3, h4, h5, h6, pre,
+  code, form, fieldset, legend, input
+  , textarea, p, blockquote, th, td, 
+  hr, button, article, aside, details,
+   figcaption, figure, footer, header,
+    hgroup, menu, nav, section
+*/
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+li {
+  list-style: none;
+}
+/* 解决父元素的高度塌陷问题 */
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.warpper {
+  width: 1200px;
+  margin: 0 auto;
+}
+.top-bar {
+  background-color: #2e2828;
+  height: 36px;
+  position: relative;
+  z-index: 11;
+}
+.top-bar a {
+  color: #afafaf;
+  display: inline-block;
+  line-height: 36px;
+  font-size: 12px;
+}
+.top-bar .icon-gouwuche {
+  padding-right: 8px;
+  font-size: 14px;
+}
+.top-bar ul > li {
+  float: left;
+  padding: 0 8px;
+  position: relative;
+}
+.top-bar ul > li:nth-child(n + 2)::before {
+  content: '';
+  width: 1px;
+  height: 10px;
+  display: block;
+  position: absolute;
+  top: 13px;
+  left: 0;
+  background: #414141;
+}
+.top-bar ul > li > a:hover {
+  color: white;
+}
+.top-bar .top-sub {
+  position: relative;
+  padding-right: 25px;
+}
+.top-bar .top-sub::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  height: 5px;
+  width: 5px;
+  border: 1px solid;
+  border-color: #afafaf #afafaf transparent transparent;
+  transform: translateY(3px) rotate(135deg);
+}
+.top-bar .top-sub .sub {
+  display: none;
+}
+.top-bar .top-sub:hover {
+  background-color: white;
+}
+.top-bar .top-sub:hover::before {
+  display: none;
+}
+.top-bar .top-sub:hover::after {
+  border-color: #ca141d #ca141d transparent transparent;
+  transform: translateY(6px) rotate(-45deg);
+}
+.top-bar .top-sub:hover > a {
+  color: #ca141d;
+}
+.top-bar .top-sub:hover .sub {
+  display: block;
+  background-color: white;
+  position: absolute;
+  top: 36px;
+  right: 0;
+  padding: 12px 0 6px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 36px 0 rgba(0, 0, 0, 0.07);
+}
+.top-bar .top-sub:hover .sub dt {
+  text-align: center;
+}
+.top-bar .top-sub:hover .sub dt a {
+  color: #777;
+}
+.top-bar .top-sub:hover .sub dt a:hover {
+  color: #ca141d;
+}
+.top-bar .top-sub:hover .sub1 {
+  width: 120px;
+}
+.top-bar .top-sub:hover .sub2 {
+  width: 100%;
+}
+.top-bar .top-sub:hover .sub3 {
+  width: 925px;
+  position: absolute;
+  right: 0;
+  top: 36px;
+  padding: 20px 0 0 0;
+  background-color: white;
+}
+.top-bar .top-sub:hover .sub3 > div {
+  float: left;
+  width: 185px;
+  padding: 0;
+}
+.top-bar .top-sub:hover .sub3 a {
+  float: left;
+  width: 50%;
+  color: #777;
+}
+.top-bar .top-sub:hover .sub3 a:hover {
+  color: #ca141d;
+  text-decoration: none;
+}
+.top-bar .top-sub:hover .sub3 .home {
+  text-align: center;
+}
+.top-bar .top-sub:hover .sub3 .home a {
+  width: 100%;
+}
+.top-bar .top-sub:hover .sub3 .home div {
+  margin: 10px auto;
+  width: 50px;
+  height: 50px;
+  background-color: #dadada;
+  border-radius: 50%;
+}
+.top-bar .top-sub:hover .sub3 .home div i {
+  font-size: 33px;
+  line-height: 50px;
+}
+.top-bar .top-sub:hover .sub-phone {
+  width: 310%;
+  padding: 20px 20px 0 20px;
+  position: absolute;
+  top: 36px;
+  right: 0;
+  background-color: white;
+}
+.top-bar .top-sub:hover .sub-phone > div {
+  padding-bottom: 20px;
+}
+.top-bar .top-sub:hover .sub-phone img {
+  width: 90px;
+  height: 90px;
+}
+.top-bar .top-sub:hover .sub-phone .code-img {
+  float: left;
+}
+.top-bar .top-sub:hover .sub-phone .wechat {
+  padding-left: 10px;
+  float: right;
+}
+.top-bar .top-sub:hover .sub-phone .wechat p {
+  font-size: 12px;
+  color: #777;
+}
+.top-bar .top-sub:hover .sub-gouwuche {
+  padding: 50px 0;
+  background-color: white;
+  width: 500%;
+  position: absolute;
+  right: 0;
+  top: 36px;
+  text-align: center;
+}
+.top-bar .top-sub:hover .sub-gouwuche div {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #e4e4e4;
+  margin: 0 auto;
+}
+.top-bar .top-sub:hover .sub-gouwuche .icon-gouwuche {
+  font-size: 55px;
+  color: #ccc8c8;
+  line-height: 100px;
+}
+.top-bar .top-sub:hover .sub-gouwuche p {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #afafaf;
+}
+.top-bar .top-bar-left {
+  float: left;
+}
+.top-bar .top-bar-right {
+  float: right;
+}
+.header {
+  background-color: #ffffff;
+  padding: 18px 0 15px;
+}
+.header .warpper .logo {
+  float: left;
+}
+.header .warpper .logo img {
+  width: 205px;
+  height: 36px;
+}
+.header .warpper .nav {
+  float: left;
+}
+.header .warpper .nav li {
+  float: left;
+  text-align: center;
+}
+.header .warpper .nav li a {
+  display: inline-block;
+  line-height: 36px;
+  padding-right: 20px;
+}
+.header .warpper .nav li a img {
+  width: 100%;
+  display: block;
+}
+.header .warpper .nav li:nth-of-type(1) a {
+  width: 74px;
+  padding: 7px 20px 0 30px;
+}
+.header .warpper .right-search {
+  position: relative;
+  font-size: 0;
+  float: right;
+  margin-top: 7px;
+  z-index: 9;
+}
+.header .warpper .right-search input[type='text'] {
+  vertical-align: middle;
+  width: 200px;
+  height: 30px;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+  border: 1px solid #c9c9c9;
+  border-right: none;
+  outline: none;
+  border-radius: 15px 0 0 15px;
+  font-size: 12px;
+  line-height: 36px;
+  text-indent: 2em;
+}
+.header .warpper .right-search input[type='text']:focus ~ P {
+  display: none;
+}
+.header .warpper .right-search input[type='text']:focus ~ div {
+  display: block;
+}
+.header .warpper .right-search input[type='submit'] {
+  height: 30px;
+  width: 30px;
+  background-color: #f0f0f0;
+  border-radius: 0 15px 15px 0;
+  border: 1px solid #c9c9c9;
+  border-left: none;
+  outline: none;
+  vertical-align: middle;
+}
+.header .warpper .right-search input[type='submit']::after {
+  content: '';
+  display: inline-block;
+}
+.header .warpper .right-search a {
+  font-size: 12px;
+  color: #999;
+  margin-right: 5px;
+}
+.header .warpper .right-search form > p:nth-of-type(1) {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header .warpper .right-search i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header .warpper .right-search div {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 100%;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 36px 0 rgba(0, 0, 0, 0.07);
+}
+.header .warpper .right-search div p {
+  padding: 0 10px;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  background-color: white;
+}
+.header .warpper .right-search div p:hover {
+  background-color: #c9c9c9;
+}
+.header .warpper .right-search div p:nth-last-of-type(1) {
+  border-radius: 0 0 8px 8px;
+}
+.main {
+  position: relative;
+}
+.slider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  background-color: #eeeeee;
+  width: 1920px;
+  overflow-y: auto;
+}
+.slider ul {
+  width: 8000px;
+}
+.slider ul > li {
+  float: left;
+}
+.slider ul > li img {
+  border-radius: 0 0 50% 50%/0 0 150px 150px;
+}
+.side-bar {
+  position: relative;
+  z-index: 99;
+}
+.side-bar ul {
+  padding-top: 20px;
+  width: 200px;
+  box-shadow: 0 2px 36px 0 rgba(0, 0, 0, 0.07);
+}
+.side-bar ul li {
+  background-color: white;
+  padding: 0 16px;
+}
+.side-bar ul li a,
+.side-bar ul li i {
+  line-height: 36px;
+  color: #848484;
+}
+.side-bar ul li i {
+  float: right;
+}
+.side-bar ul li:nth-of-type(1) {
+  border-radius: 8px 8px 0 0;
+}
+.side-bar ul li:nth-last-of-type(1) {
+  border-radius: 0 0 8px 8px;
+}

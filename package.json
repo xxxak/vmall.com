@@ -1,0 +1,23 @@
+{
+  "name": "vmall.com",
+  "version": "1.0.0",
+  "description": "前端(PC)端项目\r - 项目名\r     - [node_modules]   存放第三方node模块 由npm自动创建\r     - [interface]      存放php接口文件\r         - [library]    php库文件 conn\r     - [src]            存放源代码(开发环境代码)\r         - [html]\r             - index.html\r             - product.html\r             - shop.html\r             - reg.html\r             - login.html\r         - [js]\r             -[library]  存放前端库文件(模块)\r                 - jquery.js\r                 - bootstrap.js\r                 - cookie.js\r                 - querystring.js\r             - index.js\r             - product.js\r             - shop.js\r         - [styles]\r             - index.less\r             - product.less\r             - header.less\r         - [imgs]\r     - [dist]           存放部署环境代码(工具生成的代码) grunt gulp webpack ...\r         - [html]\r             - index.html\r             - product.html\r         - [js]\r             - [library]\r                 - jquery.min.js\r                 - bootstrap.min.js\r                 - cookie.min.js\r                 - querystring.min.js\r             - index.min.js\r             - product.min.js\r         - [css]\r             - index.min.css\r             - product.min.css\r         - [imgs]\r     - README.md        项目说明\r     - .gitignore       git忽略文件\r     - package.json     初始化项目时自动生成(npm init -y)\r     - gulpfile.js      gulp工具配置文件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-less": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp.spritesmith": "^6.12.1"
+  }
+}
