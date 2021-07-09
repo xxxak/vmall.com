@@ -7,6 +7,8 @@ html, body, div, dl, dt, dd, ul,
    figcaption, figure, footer, header,
     hgroup, menu, nav, section
 */
+
+@charset 'utf-8';
 * {
     padding: 0;
     margin: 0;
@@ -44,7 +46,7 @@ li {
     background-color: #2e2828;
     height: 36px;
     position: relative;
-    z-index: 11;
+    z-index: 100;
     a {
         color: #afafaf;
         display: inline-block;
@@ -239,7 +241,7 @@ li {
 
 // header
 .header {
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     padding: 18px 0 15px;
 
     .warpper {
@@ -277,7 +279,7 @@ li {
             font-size: 0;
             float: right;
             margin-top: 7px;
-            z-index: 9;
+            z-index: 99;
 
             input[type='text'] {
                 vertical-align: middle;
@@ -336,6 +338,7 @@ li {
                 left: 0;
                 top: 40px;
                 width: 100%;
+                z-index: 99;
                 border-radius: 0 0 8px 8px;
                 box-shadow: 0 2px 36px 0 rgba(0, 0, 0, 0.07);
                 p {
@@ -359,6 +362,7 @@ li {
 }
 .main {
     position: relative;
+    z-index: 98;
 }
 // 轮播图 slider
 
@@ -366,7 +370,7 @@ li {
     position: absolute;
     top: 0;
     left: 50%;
-    z-index: 1;
+    z-index: 98;
     transform: translateX(-50%);
     background-color: rgb(238, 238, 238);
     width: 1920px;
@@ -381,17 +385,24 @@ li {
         }
     }
 }
-
+// 侧边栏
 .side-bar {
     position: relative;
     z-index: 99;
-
-    ul {
-        padding-top: 20px;
+    padding: 1px 0 0;
+    > ul {
+        margin-top: 20px;
         width: 200px;
-        box-shadow: 0 2px 36px 0 rgba(0, 0, 0, 0.07);
-        li {
-            background-color: white;
+        // box-shadow: 0 2px 36px 0 rgba(0, 0, 0, 0.07);
+        background-color: white;
+        border-radius: 8px;
+        position: relative;
+        &:hover {
+            border-radius: 8px 0 0 8px;
+            background-color: #ece9e9;
+            // background-color: #fdfbfb;
+        }
+        > li {
             padding: 0 16px;
             a,
             i {
@@ -403,10 +414,68 @@ li {
             }
             &:nth-of-type(1) {
                 border-radius: 8px 8px 0 0;
+                &:hover {
+                    border-radius: 8px 0 0 0;
+                }
             }
             &:nth-last-of-type(1) {
                 border-radius: 0 0 8px 8px;
+                &:hover {
+                    border-radius: 0 0 0 8px;
+                }
+            }
+            .side-bar-sub {
+                display: none;
+            }
+            &:hover {
+                background-color: white;
+                .side-bar-sub {
+                    display: block;
+                    position: absolute;
+                    left: 200px;
+                    top: 0;
+                    ul {
+                        background-color: white;
+                        height: 430px;
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        padding-top: 2px;
+                        width: 200%;
+                        border-radius: 0 8px 8px 0;
+                        // box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.07);
+                        li {
+                            box-sizing: border-box;
+                            padding: 11px 30px;
+                            > div {
+                                width: 250px;
+                                background-color: white;
+                                margin: auto;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+
+                                .side-img {
+                                    float: left;
+                                    img {
+                                        width: 50px;
+                                    }
+                                }
+                                span {
+                                    margin-left: 5px;
+                                    float: left;
+                                    display: inline-block;
+                                    line-height: 50px;
+                                }
+                                &:hover {
+                                    background-color: #f1f1f1;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
 }
+@import url(./home-channel.less);

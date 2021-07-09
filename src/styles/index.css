@@ -1,3 +1,4 @@
+@charset 'utf-8';
 /*
 html, body, div, dl, dt, dd, ul,
  ol, li, h1, h2, h3, h4, h5, h6, pre,
@@ -35,7 +36,7 @@ li {
   background-color: #2e2828;
   height: 36px;
   position: relative;
-  z-index: 11;
+  z-index: 100;
 }
 .top-bar a {
   color: #afafaf;
@@ -221,7 +222,7 @@ li {
   float: right;
 }
 .header {
-  background-color: #ffffff;
+  background-color: white;
   padding: 18px 0 15px;
 }
 .header .warpper .logo {
@@ -256,7 +257,7 @@ li {
   font-size: 0;
   float: right;
   margin-top: 7px;
-  z-index: 9;
+  z-index: 99;
 }
 .header .warpper .right-search input[type='text'] {
   vertical-align: middle;
@@ -315,6 +316,7 @@ li {
   left: 0;
   top: 40px;
   width: 100%;
+  z-index: 99;
   border-radius: 0 0 8px 8px;
   box-shadow: 0 2px 36px 0 rgba(0, 0, 0, 0.07);
 }
@@ -334,12 +336,13 @@ li {
 }
 .main {
   position: relative;
+  z-index: 98;
 }
 .slider {
   position: absolute;
   top: 0;
   left: 50%;
-  z-index: 1;
+  z-index: 98;
   transform: translateX(-50%);
   background-color: #eeeeee;
   width: 1920px;
@@ -357,27 +360,91 @@ li {
 .side-bar {
   position: relative;
   z-index: 99;
+  padding: 1px 0 0;
 }
-.side-bar ul {
-  padding-top: 20px;
+.side-bar > ul {
+  margin-top: 20px;
   width: 200px;
-  box-shadow: 0 2px 36px 0 rgba(0, 0, 0, 0.07);
-}
-.side-bar ul li {
   background-color: white;
+  border-radius: 8px;
+  position: relative;
+}
+.side-bar > ul:hover {
+  border-radius: 8px 0 0 8px;
+  background-color: #ece9e9;
+}
+.side-bar > ul > li {
   padding: 0 16px;
 }
-.side-bar ul li a,
-.side-bar ul li i {
+.side-bar > ul > li a,
+.side-bar > ul > li i {
   line-height: 36px;
   color: #848484;
 }
-.side-bar ul li i {
+.side-bar > ul > li i {
   float: right;
 }
-.side-bar ul li:nth-of-type(1) {
+.side-bar > ul > li:nth-of-type(1) {
   border-radius: 8px 8px 0 0;
 }
-.side-bar ul li:nth-last-of-type(1) {
+.side-bar > ul > li:nth-of-type(1):hover {
+  border-radius: 8px 0 0 0;
+}
+.side-bar > ul > li:nth-last-of-type(1) {
   border-radius: 0 0 8px 8px;
+}
+.side-bar > ul > li:nth-last-of-type(1):hover {
+  border-radius: 0 0 0 8px;
+}
+.side-bar > ul > li .side-bar-sub {
+  display: none;
+}
+.side-bar > ul > li:hover {
+  background-color: white;
+}
+.side-bar > ul > li:hover .side-bar-sub {
+  display: block;
+  position: absolute;
+  left: 200px;
+  top: 0;
+}
+.side-bar > ul > li:hover .side-bar-sub ul {
+  background-color: white;
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 2px;
+  width: 200%;
+  border-radius: 0 8px 8px 0;
+}
+.side-bar > ul > li:hover .side-bar-sub ul li {
+  box-sizing: border-box;
+  padding: 11px 30px;
+}
+.side-bar > ul > li:hover .side-bar-sub ul li > div {
+  width: 250px;
+  background-color: white;
+  margin: auto;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.side-bar > ul > li:hover .side-bar-sub ul li > div .side-img {
+  float: left;
+}
+.side-bar > ul > li:hover .side-bar-sub ul li > div .side-img img {
+  width: 50px;
+}
+.side-bar > ul > li:hover .side-bar-sub ul li > div span {
+  margin-left: 5px;
+  float: left;
+  display: inline-block;
+  line-height: 50px;
+}
+.side-bar > ul > li:hover .side-bar-sub ul li > div:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+.home-channel {
+  padding-top: 30px;
 }
