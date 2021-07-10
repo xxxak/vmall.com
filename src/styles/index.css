@@ -8,6 +8,7 @@ html, body, div, dl, dt, dd, ul,
    figcaption, figure, footer, header,
     hgroup, menu, nav, section
 */
+@import url(../styles/reset.css);
 * {
   padding: 0;
   margin: 0;
@@ -15,6 +16,9 @@ html, body, div, dl, dt, dd, ul,
 a {
   text-decoration: none;
   color: black;
+}
+a:hover {
+  text-decoration: none !important;
 }
 li {
   list-style: none;
@@ -27,6 +31,15 @@ li {
   height: 0;
   overflow: hidden;
   visibility: hidden;
+}
+.warpper {
+  width: 1200px;
+  margin: 0 auto;
+}
+.main {
+  position: relative;
+  z-index: 98;
+  overflow: hidden;
 }
 .warpper {
   width: 1200px;
@@ -163,7 +176,7 @@ li {
   line-height: 50px;
 }
 .top-bar .top-sub:hover .sub-phone {
-  width: 310%;
+  width: 410%;
   padding: 20px 20px 0 20px;
   position: absolute;
   top: 36px;
@@ -171,22 +184,27 @@ li {
   background-color: white;
 }
 .top-bar .top-sub:hover .sub-phone > div {
+  vertical-align: top;
   padding-bottom: 20px;
 }
-.top-bar .top-sub:hover .sub-phone img {
+.top-bar .top-sub:hover .sub-phone .code-img {
+  display: inline-block;
+  vertical-align: top !important;
+  height: 100%;
+}
+.top-bar .top-sub:hover .sub-phone .code-img img {
   width: 90px;
   height: 90px;
 }
-.top-bar .top-sub:hover .sub-phone .code-img {
-  float: left;
-}
 .top-bar .top-sub:hover .sub-phone .wechat {
-  padding-left: 10px;
   float: right;
+  vertical-align: top;
+  padding-left: 10px;
 }
 .top-bar .top-sub:hover .sub-phone .wechat p {
+  display: inline-block;
   font-size: 12px;
-  color: #777;
+  color: #fc0000;
 }
 .top-bar .top-sub:hover .sub-gouwuche {
   padding: 50px 0;
@@ -221,6 +239,10 @@ li {
 .top-bar .top-bar-right {
   float: right;
 }
+.warpper {
+  width: 1200px;
+  margin: 0 auto;
+}
 .header {
   background-color: white;
   padding: 18px 0 15px;
@@ -234,23 +256,22 @@ li {
 }
 .header .warpper .nav {
   float: left;
+  margin-left: 35px;
 }
 .header .warpper .nav li {
   float: left;
   text-align: center;
+  padding-left: 30px;
 }
 .header .warpper .nav li a {
   display: inline-block;
   line-height: 36px;
-  padding-right: 20px;
-}
-.header .warpper .nav li a img {
-  width: 100%;
-  display: block;
 }
 .header .warpper .nav li:nth-of-type(1) a {
   width: 74px;
-  padding: 7px 20px 0 30px;
+}
+.header .warpper .nav li:nth-of-type(1) a img {
+  width: 100%;
 }
 .header .warpper .right-search {
   position: relative;
@@ -322,6 +343,7 @@ li {
 }
 .header .warpper .right-search div p {
   padding: 0 10px;
+  margin-bottom: 0 !important;
   display: block;
   height: 30px;
   line-height: 30px;
@@ -333,10 +355,6 @@ li {
 }
 .header .warpper .right-search div p:nth-last-of-type(1) {
   border-radius: 0 0 8px 8px;
-}
-.main {
-  position: relative;
-  z-index: 98;
 }
 .slider {
   position: absolute;
@@ -437,7 +455,6 @@ li {
 }
 .side-bar > ul > li:hover .side-bar-sub ul li > div span {
   margin-left: 5px;
-  float: left;
   display: inline-block;
   line-height: 50px;
 }
@@ -445,6 +462,58 @@ li {
   background-color: #f1f1f1;
   cursor: pointer;
 }
-.home-channel {
-  padding-top: 30px;
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1,
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2,
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3,
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5,
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6,
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7,
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8,
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9,
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10,
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11,
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12,
+.container-fluid,
+.container {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }

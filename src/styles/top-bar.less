@@ -1,0 +1,208 @@
+@hover-red: #ca141d;
+
+.warpper {
+    width: 1200px;
+    margin: 0 auto;
+}
+.top-bar {
+    background-color: #2e2828;
+    height: 36px;
+    position: relative;
+    z-index: 100;
+    a {
+        color: #afafaf;
+        display: inline-block;
+        line-height: 36px;
+        font-size: 12px;
+    }
+    // .top-bar购物车图标
+    .icon-gouwuche {
+        padding-right: 8px;
+        font-size: 14px;
+    }
+    ul > li {
+        float: left;
+        padding: 0 8px;
+        position: relative;
+
+        &:nth-child(n + 2)::before {
+            content: '';
+            width: 1px;
+            height: 10px;
+            display: block;
+            position: absolute;
+            top: 13px;
+            left: 0;
+            background: #414141;
+        }
+        > a:hover {
+            color: white;
+        }
+    }
+    // top-bar二级导航
+    .top-sub {
+        position: relative;
+        padding-right: 25px;
+        &::after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            height: 5px;
+            width: 5px;
+            border: 1px solid;
+            border-color: #afafaf #afafaf transparent transparent;
+            transform: translateY(3px) rotate(135deg);
+        }
+        .sub {
+            display: none;
+        }
+
+        &:hover {
+            background-color: white;
+            &::before {
+                display: none;
+            }
+            &::after {
+                border-color: @hover-red @hover-red transparent transparent;
+                transform: translateY(6px) rotate(-45deg);
+            }
+            & > a {
+                color: @hover-red;
+            }
+            //tob-bar二级导航
+            .sub {
+                display: block;
+                background-color: white;
+                position: absolute;
+                top: 36px;
+                right: 0;
+                padding: 12px 0 6px;
+                border-radius: 0 0 8px 8px;
+                box-shadow: 0 2px 36px 0 rgba(0, 0, 0, 0.07);
+                dt {
+                    text-align: center;
+                    a {
+                        color: #777;
+                        &:hover {
+                            color: @hover-red;
+                        }
+                    }
+                }
+            }
+            .sub1 {
+                width: 120px;
+            }
+            .sub2 {
+                width: 100%;
+            }
+            .sub3 {
+                width: 925px;
+                position: absolute;
+                right: 0;
+                top: 36px;
+                padding: 20px 0 0 0;
+                background-color: white;
+
+                > div {
+                    float: left;
+                    width: 185px;
+                    padding: 0;
+                }
+                a {
+                    float: left;
+                    width: 50%;
+                    color: #777;
+                    &:hover {
+                        color: @hover-red;
+                        text-decoration: none;
+                    }
+                }
+                .home {
+                    text-align: center;
+                    a {
+                        width: 100%;
+                    }
+                    div {
+                        margin: 10px auto;
+
+                        width: 50px;
+                        height: 50px;
+                        background-color: rgb(218, 218, 218);
+                        border-radius: 50%;
+                        i {
+                            font-size: 33px;
+                            line-height: 50px;
+                        }
+                    }
+                }
+            }
+            .sub-phone {
+                width: 410%;
+                padding: 20px 20px 0 20px;
+                position: absolute;
+                top: 36px;
+                right: 0;
+                background-color: white;
+                > div {
+                    vertical-align: top;
+                    padding-bottom: 20px;
+                }
+                .code-img {
+                    display: inline-block;
+                    vertical-align: top !important;
+                    height: 100%;
+                    img {
+                        width: 90px;
+                        height: 90px;
+                    }
+                }
+                .wechat {
+                    float: right;
+                    vertical-align: top;
+                    padding-left: 10px;
+                    p {
+                        display: inline-block;
+                        font-size: 12px;
+                        color: rgb(252, 0, 0);
+                    }
+                }
+            }
+
+            .sub-gouwuche {
+                padding: 50px 0;
+                background-color: white;
+                width: 500%;
+                position: absolute;
+                right: 0;
+                top: 36px;
+                text-align: center;
+                div {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    background-color: rgb(228, 228, 228);
+                    margin: 0 auto;
+                }
+                .icon-gouwuche {
+                    font-size: 55px;
+                    color: #ccc8c8;
+                    line-height: 100px;
+                }
+                p {
+                    margin-top: 15px;
+                    text-align: center;
+                    font-size: 14px;
+                    color: #afafaf;
+                }
+            }
+        }
+    }
+    .top-bar-left {
+        float: left;
+    }
+    .top-bar-right {
+        float: right;
+    }
+}

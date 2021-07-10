@@ -1,0 +1,198 @@
+.warpper {
+  width: 1200px;
+  margin: 0 auto;
+}
+.top-bar {
+  background-color: #2e2828;
+  height: 36px;
+  position: relative;
+  z-index: 100;
+}
+.top-bar a {
+  color: #afafaf;
+  display: inline-block;
+  line-height: 36px;
+  font-size: 12px;
+}
+.top-bar .icon-gouwuche {
+  padding-right: 8px;
+  font-size: 14px;
+}
+.top-bar ul > li {
+  float: left;
+  padding: 0 8px;
+  position: relative;
+}
+.top-bar ul > li:nth-child(n + 2)::before {
+  content: '';
+  width: 1px;
+  height: 10px;
+  display: block;
+  position: absolute;
+  top: 13px;
+  left: 0;
+  background: #414141;
+}
+.top-bar ul > li > a:hover {
+  color: white;
+}
+.top-bar .top-sub {
+  position: relative;
+  padding-right: 25px;
+}
+.top-bar .top-sub::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  height: 5px;
+  width: 5px;
+  border: 1px solid;
+  border-color: #afafaf #afafaf transparent transparent;
+  transform: translateY(3px) rotate(135deg);
+}
+.top-bar .top-sub .sub {
+  display: none;
+}
+.top-bar .top-sub:hover {
+  background-color: white;
+}
+.top-bar .top-sub:hover::before {
+  display: none;
+}
+.top-bar .top-sub:hover::after {
+  border-color: #ca141d #ca141d transparent transparent;
+  transform: translateY(6px) rotate(-45deg);
+}
+.top-bar .top-sub:hover > a {
+  color: #ca141d;
+}
+.top-bar .top-sub:hover .sub {
+  display: block;
+  background-color: white;
+  position: absolute;
+  top: 36px;
+  right: 0;
+  padding: 12px 0 6px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 36px 0 rgba(0, 0, 0, 0.07);
+}
+.top-bar .top-sub:hover .sub dt {
+  text-align: center;
+}
+.top-bar .top-sub:hover .sub dt a {
+  color: #777;
+}
+.top-bar .top-sub:hover .sub dt a:hover {
+  color: #ca141d;
+}
+.top-bar .top-sub:hover .sub1 {
+  width: 120px;
+}
+.top-bar .top-sub:hover .sub2 {
+  width: 100%;
+}
+.top-bar .top-sub:hover .sub3 {
+  width: 925px;
+  position: absolute;
+  right: 0;
+  top: 36px;
+  padding: 20px 0 0 0;
+  background-color: white;
+}
+.top-bar .top-sub:hover .sub3 > div {
+  float: left;
+  width: 185px;
+  padding: 0;
+}
+.top-bar .top-sub:hover .sub3 a {
+  float: left;
+  width: 50%;
+  color: #777;
+}
+.top-bar .top-sub:hover .sub3 a:hover {
+  color: #ca141d;
+  text-decoration: none;
+}
+.top-bar .top-sub:hover .sub3 .home {
+  text-align: center;
+}
+.top-bar .top-sub:hover .sub3 .home a {
+  width: 100%;
+}
+.top-bar .top-sub:hover .sub3 .home div {
+  margin: 10px auto;
+  width: 50px;
+  height: 50px;
+  background-color: #dadada;
+  border-radius: 50%;
+}
+.top-bar .top-sub:hover .sub3 .home div i {
+  font-size: 33px;
+  line-height: 50px;
+}
+.top-bar .top-sub:hover .sub-phone {
+  width: 410%;
+  padding: 20px 20px 0 20px;
+  position: absolute;
+  top: 36px;
+  right: 0;
+  background-color: white;
+}
+.top-bar .top-sub:hover .sub-phone > div {
+  vertical-align: top;
+  padding-bottom: 20px;
+}
+.top-bar .top-sub:hover .sub-phone .code-img {
+  display: inline-block;
+  vertical-align: top !important;
+  height: 100%;
+}
+.top-bar .top-sub:hover .sub-phone .code-img img {
+  width: 90px;
+  height: 90px;
+}
+.top-bar .top-sub:hover .sub-phone .wechat {
+  float: right;
+  vertical-align: top;
+  padding-left: 10px;
+}
+.top-bar .top-sub:hover .sub-phone .wechat p {
+  display: inline-block;
+  font-size: 12px;
+  color: #fc0000;
+}
+.top-bar .top-sub:hover .sub-gouwuche {
+  padding: 50px 0;
+  background-color: white;
+  width: 500%;
+  position: absolute;
+  right: 0;
+  top: 36px;
+  text-align: center;
+}
+.top-bar .top-sub:hover .sub-gouwuche div {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #e4e4e4;
+  margin: 0 auto;
+}
+.top-bar .top-sub:hover .sub-gouwuche .icon-gouwuche {
+  font-size: 55px;
+  color: #ccc8c8;
+  line-height: 100px;
+}
+.top-bar .top-sub:hover .sub-gouwuche p {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #afafaf;
+}
+.top-bar .top-bar-left {
+  float: left;
+}
+.top-bar .top-bar-right {
+  float: right;
+}

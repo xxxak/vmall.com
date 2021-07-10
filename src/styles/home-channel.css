@@ -1,3 +1,111 @@
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
 .home-channel {
-  padding-top: 30px;
+  position: relative;
+  z-index: 99;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 26px rgba(0, 0, 0, 0.07);
+}
+.home-channel > div {
+  float: left;
+}
+.home-channel .person {
+  vertical-align: middle;
+  margin-top: 15px;
+  width: 22.5%;
+  padding-left: 26px;
+  box-sizing: border-box;
+}
+.home-channel .person .person-img {
+  float: left;
+  width: 22.5%;
+  margin-top: 17px;
+  margin-right: 20px;
+}
+.home-channel .person .person-img img {
+  width: 100%;
+}
+.home-channel .person .person-msg {
+  margin-top: 17px;
+  margin-bottom: 17px;
+  float: left;
+}
+.home-channel .person .person-msg p {
+  color: #999;
+}
+.home-channel .person .person-msg p span {
+  color: black;
+}
+.home-channel .person .person-msg p i {
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  width: 66px;
+  line-height: 20px;
+  background: #fff;
+  border: 1px solid #e47b7f;
+  color: #de5b60;
+  margin-right: 8px;
+}
+.home-channel .person .person-msg p i:hover {
+  color: #fff;
+  background: #de5b60;
+  border-color: #de5b60;
+}
+.home-channel .person .person-msg p em {
+  cursor: pointer;
+  display: inline-block;
+  width: 68px;
+  height: 22px;
+  text-align: center;
+  line-height: 22px;
+  background: #595454;
+  color: #fde4b3;
+  border-radius: 5px;
+  font-size: 13px;
+}
+.home-channel .person .person-msg p em:hover {
+  background: #333;
+}
+.home-channel .channel-list {
+  box-sizing: border-box;
+  margin-top: 17px;
+  margin-bottom: 17px;
+  width: 55%;
+  text-align: center;
+}
+.home-channel .channel-list ul > li {
+  box-sizing: border-box;
+  width: 110px;
+  float: left;
+}
+.home-channel .channel-list ul > li:nth-of-type(1) {
+  border-left: 1px solid #e3e3e3;
+}
+.home-channel .channel-list ul > li div {
+  width: 40px;
+  height: 40px;
+  background: url(../img/e7027cae5c123743a751694119494016.png) no-repeat;
+  background-size: cover;
+  margin: 10px auto;
+}
+.home-channel .channel-list ul > li div:hover {
+  cursor: pointer;
+}
+.home-channel .channel-list ul > li span {
+  user-select: none;
+  text-align: center;
+  color: #777;
+}
+.home-channel .channel-list ul > li span:hover {
+  color: #f74b4b;
+  cursor: pointer;
+}
+.home-channel .gonggao {
+  width: 22.5%;
 }
