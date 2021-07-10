@@ -1,0 +1,19 @@
+.top-promo-product {
+    padding-top: 10px;
+}
+.top-promo-product ul li {
+    float: left;
+    width: 24%;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+.top-promo-product ul li img {
+    width: 100%;
+    border-radius: 10px;
+}
+.top-promo-product ul li:hover {
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+}
+.top-promo-product ul li:nth-of-type(n + 2) {
+    margin-left: 16px;
+}

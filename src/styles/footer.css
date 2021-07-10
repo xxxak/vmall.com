@@ -1,0 +1,62 @@
+.footer {
+  background: #f9f9f9;
+}
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+.footer .slogan {
+  padding: 20px 0;
+}
+.footer .slogan ul li {
+  float: left;
+  width: 25%;
+}
+.footer .slogan ul li p {
+  line-height: 40px;
+}
+.footer .slogan ul li p i {
+  text-align: center;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid red;
+  vertical-align: middle;
+  color: red;
+  line-height: 40px;
+  font-size: 28px;
+  margin-right: 20px;
+}
+.footer .slogan ul li p sapn {
+  vertical-align: middle;
+  color: #3a3a3a;
+}
+.footer .servece {
+  padding: 24px 0;
+}
+.footer .servece .s-left {
+  float: left;
+  width: 77%;
+}
+.footer .servece .s-left ul li {
+  float: left;
+  width: 16.6%;
+}
+.footer .servece .s-left ul li p {
+  font-size: 14px;
+  padding: 0 0 7px 0;
+  margin: 0;
+}
+.footer .servece .s-left ul li a {
+  display: block;
+  font-size: 12px;
+  height: 21px;
+  line-height: 21px;
+}
+.footer .servece .s-right {
+  float: left;
+  width: 23%;
+  box-sizing: border-box;
+  border-left: 1px solid #aaaaaa;
+}

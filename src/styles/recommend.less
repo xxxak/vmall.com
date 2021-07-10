@@ -1,0 +1,73 @@
+.recommend {
+    position: relative;
+    ul {
+        li {
+            float: left;
+            width: 19%;
+            text-align: center;
+            &:nth-of-type(n + 2) {
+                margin-left: 15px;
+            }
+            div {
+                box-shadow: 0 1px 8px rgb(0 0 0 / 6%);
+                border-radius: 10px;
+                img {
+                    width: 70%;
+                    padding: 30px 0;
+                    margin: 10px auto;
+                }
+                p {
+                    background: #f3f3f3;
+                    color: #777;
+                    padding: 10px;
+
+                    border-radius: 0 0 10px 10px;
+                }
+            }
+            span {
+                display: block;
+            }
+            i {
+                color: #d0021b;
+            }
+        }
+    }
+    .left-but,
+    .right-but {
+        width: 36px;
+        height: 72px;
+        top: 101px;
+        background: rgba(0, 0, 0, 0.06);
+        text-align: center;
+        color: black;
+        line-height: 72px;
+        position: absolute;
+        top: 160px;
+        transition: background-color 0.3s;
+        &:hover {
+            background-color: rgb(158, 158, 158);
+            cursor: pointer;
+        }
+    }
+    .left-but {
+        left: 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .right-but {
+        right: 0;
+        border-radius: 8px 0 0 8px;
+    }
+}
+// 小轮播图
+.small-slider {
+    margin-top: 40px;
+    ul li {
+        float: left;
+        width: 100px;
+        img {
+            border-radius: 10px;
+            width: 1200px;
+            height: 120px;
+        }
+    }
+}

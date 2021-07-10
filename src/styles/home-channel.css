@@ -107,5 +107,23 @@
   cursor: pointer;
 }
 .home-channel .gonggao {
+  border-left: 1px solid #e3e3e3;
   width: 22.5%;
+  height: 100%;
+}
+.home-channel .gonggao p {
+  border-bottom: 1px solid #e3e3e3;
+  padding: 20px 0;
+}
+.home-channel .gonggao .gonggao-list li {
+  padding: 5px 0 15px;
+  float: left;
+  width: 33%;
+}
+.home-channel .gonggao .gonggao-list li div {
+  float: left;
+  width: 20px;
+  height: 20px;
+  background: url(../img/channeLlistPic.png);
+  background-size: cover;
 }

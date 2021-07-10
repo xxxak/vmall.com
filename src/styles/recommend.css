@@ -1,0 +1,70 @@
+.recommend {
+  position: relative;
+}
+.recommend ul li {
+  float: left;
+  width: 19%;
+  text-align: center;
+}
+.recommend ul li:nth-of-type(n + 2) {
+  margin-left: 15px;
+}
+.recommend ul li div {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+}
+.recommend ul li div img {
+  width: 70%;
+  padding: 30px 0;
+  margin: 10px auto;
+}
+.recommend ul li div p {
+  background: #f3f3f3;
+  color: #777;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+}
+.recommend ul li span {
+  display: block;
+}
+.recommend ul li i {
+  color: #d0021b;
+}
+.recommend .left-but,
+.recommend .right-but {
+  width: 36px;
+  height: 72px;
+  top: 101px;
+  background: rgba(0, 0, 0, 0.06);
+  text-align: center;
+  color: black;
+  line-height: 72px;
+  position: absolute;
+  top: 160px;
+  transition: background-color 0.3s;
+}
+.recommend .left-but:hover,
+.recommend .right-but:hover {
+  background-color: #9e9e9e;
+  cursor: pointer;
+}
+.recommend .left-but {
+  left: 0;
+  border-radius: 0 8px 8px 0;
+}
+.recommend .right-but {
+  right: 0;
+  border-radius: 8px 0 0 8px;
+}
+.small-slider {
+  margin-top: 40px;
+}
+.small-slider ul li {
+  float: left;
+  width: 100px;
+}
+.small-slider ul li img {
+  border-radius: 10px;
+  width: 1200px;
+  height: 120px;
+}
