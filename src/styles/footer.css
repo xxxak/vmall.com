@@ -7,12 +7,14 @@
 }
 .footer .slogan {
   padding: 20px 0;
+  border-bottom: 1px solid #aaaaaa;
 }
 .footer .slogan ul li {
   float: left;
   width: 25%;
 }
 .footer .slogan ul li p {
+  margin: 0;
   line-height: 40px;
 }
 .footer .slogan ul li p i {
@@ -34,6 +36,7 @@
 }
 .footer .servece {
   padding: 24px 0;
+  border-bottom: 1px solid #aaaaaa;
 }
 .footer .servece .s-left {
   float: left;
@@ -53,10 +56,141 @@
   font-size: 12px;
   height: 21px;
   line-height: 21px;
+  color: #777;
+}
+.footer .servece .s-left ul li a:hover {
+  color: red;
 }
 .footer .servece .s-right {
   float: left;
   width: 23%;
   box-sizing: border-box;
   border-left: 1px solid #aaaaaa;
+  text-align: center;
+}
+.footer .servece .s-right > span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #575757;
+}
+.footer .servece .s-right > i {
+  font-size: 14px;
+  display: block;
+  cursor: text;
+  position: relative;
+}
+.footer .servece .s-right > i:hover {
+  color: #ca141d;
+  text-decoration: none;
+}
+.footer .servece .s-right > p {
+  width: 170px;
+  height: 34px;
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 34px;
+  background: #333;
+  cursor: pointer;
+  border-radius: 17px;
+  text-align: center;
+}
+.footer .servece .s-right > p i,
+.footer .servece .s-right > p span {
+  color: white;
+}
+.footer .servece .s-right > p:hover {
+  background: #777;
+}
+.footer .servece .s-right > div {
+  cursor: pointer;
+  padding-top: 20px;
+  color: #3a3a3a;
+}
+.footer .servece .s-right > div span {
+  font-size: 14px;
+}
+.footer .servece .s-right > div span:hover {
+  color: #aaaaaa;
+}
+.footer .servece .s-right > div i {
+  position: relative;
+  font-size: 16px;
+  padding-left: 3px;
+}
+.footer .servece .s-right > div i:hover {
+  color: #aaaaaa;
+}
+.footer .servece .s-right > div i:nth-of-type(1) div {
+  display: none;
+}
+.footer .servece .s-right > div i:nth-of-type(1):hover div {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: url(../img/FWETOIrFlCrX4xuB8E16.png) no-repeat center center / 90%;
+  position: absolute;
+  top: 20px;
+  left: 56%;
+  transform: translateX(-50%);
+  border: 5px solid white;
+  box-shadow: 0 0 2px 0 #aaaaaa;
+}
+.footer .servece .s-right > div i:nth-of-type(1):hover div::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: 5px solid #fd0000;
+  border-color: transparent transparent white transparent;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -15px;
+}
+.footer .copyright {
+  padding: 20px 0;
+}
+.footer .copyright .c-left {
+  float: left;
+  width: 100px;
+}
+.footer .copyright .c-left img {
+  width: 80%;
+  margin: 0 auto;
+}
+.footer .copyright .c-center {
+  float: left;
+  font-size: 12px;
+}
+.footer .copyright .c-center a,
+.footer .copyright .c-center span {
+  font-size: 12px;
+}
+.footer .copyright .c-center a:hover {
+  color: red;
+}
+.footer .copyright .c-center p {
+  color: #a4a4a4;
+}
+.footer .copyright .c-center p:nth-of-type(1) a {
+  color: #777;
+}
+.footer .copyright .c-center p:nth-of-type(1) a:hover {
+  color: red;
+}
+.footer .copyright .c-center p a {
+  color: #a4a4a4;
+}
+.footer .copyright .c-center p a:hover {
+  color: red;
+}
+.footer .copyright .c-right {
+  float: right;
+  width: 275px;
+}
+.footer .copyright .c-right img {
+  width: 33%;
+  margin: 0 auto;
 }
