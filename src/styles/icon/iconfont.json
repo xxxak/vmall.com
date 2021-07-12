@@ -104,6 +104,13 @@
       "unicode_decimal": 58957
     },
     {
+      "icon_id": "3847401",
+      "name": "客服",
+      "font_class": "kefu",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
       "icon_id": "5334168",
       "name": "箭头",
       "font_class": "jiantou2",
@@ -221,6 +228,55 @@
       "font_class": "huidaodingbu1",
       "unicode": "e630",
       "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "22632580",
+      "name": "菜谱-1",
+      "font_class": "caipu-1",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "22632590",
+      "name": "返回",
+      "font_class": "fanhui",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
+      "icon_id": "22632596",
+      "name": "前进",
+      "font_class": "qianjin",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "22632601",
+      "name": "日历",
+      "font_class": "rili",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "22632611",
+      "name": "日历-一周",
+      "font_class": "rili-yizhou",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "22632616",
+      "name": "认证",
+      "font_class": "renzheng",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "22632618",
+      "name": "位置",
+      "font_class": "weizhi",
+      "unicode": "e639",
+      "unicode_decimal": 58937
     }
   ]
 }

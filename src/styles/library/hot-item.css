@@ -1,0 +1,42 @@
+.title {
+  padding-top: 20px;
+}
+.hot-item-content img {
+  border-radius: 10px;
+}
+.hot-item-content .left-hot-item {
+  float: left;
+  width: 19%;
+  height: 66%;
+  transition: all 0.3s;
+}
+.hot-item-content .left-hot-item:hover {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+}
+.hot-item-content .left-hot-item img {
+  width: 100%;
+}
+.hot-item-content .right-itme-list {
+  float: left;
+  width: 80%;
+}
+.hot-item-content .right-itme-list ul li {
+  padding-bottom: 14px;
+  margin: 0 0 12px 12px;
+  text-align: center;
+  background: #f9f9f9;
+  float: left;
+  width: 228px;
+  transition: all 0.3s;
+  color: #3a3a3a;
+}
+.hot-item-content .right-itme-list ul li img {
+  width: 100%;
+  border-radius: 10px;
+}
+.hot-item-content .right-itme-list ul li i {
+  display: block;
+}
+.hot-item-content .right-itme-list ul li:hover {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+}

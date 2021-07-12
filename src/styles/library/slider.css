@@ -1,0 +1,19 @@
+.slider {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 66;
+    transform: translateX(-50%);
+    background-color: #eeeeee;
+    width: 1920px;
+    overflow-y: auto;
+}
+.slider ul {
+    width: 8000px;
+}
+.slider ul > li {
+    float: left;
+}
+.slider ul > li img {
+    border-radius: 0 0 50% 50%/0 0 150px 150px;
+}

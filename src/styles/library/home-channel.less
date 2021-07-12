@@ -1,0 +1,137 @@
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.home-channel {
+    position: relative;
+    z-index: 99;
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 2px 26px rgb(0 0 0 / 7%);
+
+    > div {
+        float: left;
+    }
+    .person {
+        vertical-align: middle;
+        margin-top: 15px;
+        width: 22.5%;
+        padding-left: 26px;
+        box-sizing: border-box;
+
+        .person-img {
+            float: left;
+            width: 22.5%;
+            margin-top: 17px;
+            margin-right: 20px;
+            img {
+                width: 100%;
+            }
+        }
+        .person-msg {
+            margin-top: 17px;
+            margin-bottom: 17px;
+            float: left;
+            p {
+                color: #999;
+                span {
+                    color: black;
+                }
+                i {
+                    border-radius: 5px;
+                    font-size: 13px;
+                    cursor: pointer;
+                    text-align: center;
+                    display: inline-block;
+                    width: 66px;
+                    line-height: 20px;
+                    background: #fff;
+                    border: 1px solid #e47b7f;
+                    color: #de5b60;
+                    margin-right: 8px;
+                    &:hover {
+                        color: #fff;
+                        background: #de5b60;
+                        border-color: #de5b60;
+                    }
+                }
+                em {
+                    cursor: pointer;
+                    display: inline-block;
+                    width: 68px;
+                    height: 22px;
+                    text-align: center;
+                    line-height: 22px;
+                    background: #595454;
+                    color: #fde4b3;
+                    border-radius: 5px;
+                    font-size: 13px;
+                    &:hover {
+                        background: #333;
+                    }
+                }
+            }
+        }
+    }
+    .channel-list {
+        box-sizing: border-box;
+        margin-top: 17px;
+        margin-bottom: 17px;
+        width: 55%;
+        text-align: center;
+        ul > li {
+            box-sizing: border-box;
+            width: 110px;
+            float: left;
+            &:nth-of-type(1) {
+                border-left: 1px solid #e3e3e3;
+            }
+            div {
+                width: 40px;
+                height: 40px;
+                background: url(../img/e7027cae5c123743a751694119494016.png) no-repeat;
+                background-size: cover;
+
+                margin: 10px auto;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            span {
+                user-select: none;
+                text-align: center;
+                color: #777;
+                &:hover {
+                    color: rgb(247, 75, 75);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .gonggao {
+        border-left: 1px solid #e3e3e3;
+        width: 22.5%;
+        height: 100%;
+        p {
+            border-bottom: 1px solid #e3e3e3;
+            padding: 20px 0;
+        }
+        .gonggao-list {
+            li {
+                padding: 5px 0 15px;
+                float: left;
+                width: 33%;
+                div {
+                    float: left;
+                    width: 20px;
+                    height: 20px;
+                    background: url(../img/channeLlistPic.png);
+                    background-size: cover;
+                }
+            }
+        }
+    }
+}
