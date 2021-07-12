@@ -65,14 +65,34 @@ fieldset {
     outline: none;
     border: 0;
 }
-.clear_fix:after {
-    content: '.';
+
+.clear_fix {
+    zoom: 1;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    text-decoration: none !important;
+}
+li {
+    list-style: none;
+}
+
+/* 解决父元素的高度塌陷问题 */
+
+.clearfix::after {
+    content: '';
+    display: block;
     clear: both;
     height: 0;
     overflow: hidden;
-    display: block;
     visibility: hidden;
-}
-.clear_fix {
-    zoom: 1;
 }

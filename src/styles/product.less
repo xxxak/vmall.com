@@ -1,0 +1,114 @@
+@charset 'utf-8';
+
+// hover后的字体颜色
+@hover-red: #ca141d;
+.warpper {
+    width: 1200px;
+    margin: 0 auto;
+}
+.main {
+    position: relative;
+    z-index: 98;
+    overflow: hidden;
+}
+@import './library/reset.css';
+@import './library/top-bar.less'; //tob-bar
+@import './library/header'; // header
+@import './library/footer'; //footer
+@import './icon/iconfont.css';
+
+.product-path {
+    font-size: 12px;
+    color: #666;
+}
+// 商品放大镜和属性选择
+// 放大镜
+.product {
+    margin-top: 10xp;
+    .scale {
+        float: left;
+        width: 37.5%;
+        background-color: wheat;
+        height: 600px;
+        .small {
+            width: 100%;
+            background-color: yellowgreen;
+
+            img {
+                width: 100%;
+            }
+        }
+        > ul {
+            width: 360px;
+            margin: 0 auto;
+            li {
+                width: 60px;
+                float: left;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .product-property {
+        h1 {
+            padding: 5px 0;
+        }
+        float: left;
+        background-color: yellow;
+        width: 62.5%;
+        height: 600px;
+        .product-info {
+            background: #f5f5f5;
+            padding: 14px 5px 3px;
+            label {
+                float: left;
+                width: 85px;
+                text-indent: 10px;
+                line-height: 30px;
+                color: #3a3a3a;
+                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                font-size: 12px;
+            }
+            .product-price {
+                color: #ca141d;
+                padding-right: 3px;
+                font-size: 24px;
+                line-height: 30px;
+            }
+            .chuxiao {
+                p {
+                    color: #3a3a3a;
+                    font-size: 12px;
+                    line-height: 30px;
+                    span {
+                        float: left;
+                        line-height: 18px;
+                        height: 18px;
+                        border: 1px solid #ca141d;
+                        padding: 0 6px;
+                        min-width: 24px;
+                        color: #ca141d;
+                        text-align: center;
+                        margin-right: 10px;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+        > p {
+            font-size: 12px;
+            color: #3a3a3a;
+            text-indent: 15px;
+            padding: 10px 0;
+            label {
+                width: 85px;
+                text-indent: 10px;
+                line-height: 30px;
+                color: #3a3a3a;
+                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                font-size: 12px;
+            }
+        }
+    }
+}
