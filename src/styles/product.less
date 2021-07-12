@@ -24,7 +24,7 @@
 // 商品放大镜和属性选择
 // 放大镜
 .product {
-    margin-top: 10xp;
+    margin-top: 10px;
     .scale {
         float: left;
         width: 37.5%;
@@ -60,11 +60,11 @@
         height: 600px;
         .product-info {
             background: #f5f5f5;
-            padding: 14px 5px 3px;
+            padding: 14px 0 3px;
             label {
                 float: left;
-                width: 85px;
-                text-indent: 10px;
+                width: 90px;
+                text-indent: 15px;
                 line-height: 30px;
                 color: #3a3a3a;
                 font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -99,15 +99,120 @@
         > p {
             font-size: 12px;
             color: #3a3a3a;
-            text-indent: 15px;
-            padding: 10px 0;
+
+            padding-top: 10px;
             label {
-                width: 85px;
-                text-indent: 10px;
+                display: inline-block;
+                width: 90px;
+                text-indent: 15px;
                 line-height: 30px;
                 color: #3a3a3a;
                 font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
                 font-size: 12px;
+            }
+        }
+        .property-select {
+            border-top: 1px solid #a4a4a4;
+            padding-top: 20px;
+            height: 275px;
+            background-color: chartreuse;
+            label {
+                display: inline-block;
+                width: 90px;
+                text-indent: 15px;
+                line-height: 30px;
+                color: #3a3a3a;
+                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                font-size: 12px;
+            }
+            span {
+                display: inline-block;
+                color: #3a3a3a;
+                cursor: pointer;
+                height: 38px;
+                font-size: 12px;
+                text-indent: 30px;
+                line-height: 38px;
+                box-sizing: border-box;
+                border: 1px solid #a4a4a4;
+                text-align: center;
+                padding: 0 12px;
+                background: url(../img/d1.png) no-repeat 12px center / 25px 25px;
+                &:hover {
+                    border: 1px solid red;
+                }
+            }
+            i {
+                font-size: 12px;
+                color: red;
+            }
+        }
+    }
+    .product-selected {
+        p {
+            height: 30px;
+            label {
+                float: left;
+                width: 90px;
+                text-indent: 15px;
+                line-height: 30px;
+                color: #3a3a3a;
+                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                font-size: 12px;
+                line-height: 30px;
+            }
+            i {
+                font-size: 12px;
+                color: red;
+                display: inline-block;
+                line-height: 30px;
+            }
+        }
+        .add {
+            padding-left: 15px;
+            .num {
+                background-color: chartreuse;
+                vertical-align: middle;
+                float: left;
+                margin-right: 10px;
+                input {
+                    float: left;
+                    height: 46px;
+                    width: 46px;
+                    box-sizing: border-box;
+                    border: 1px solid #a4a4a4;
+                    text-align: center;
+                    font-size: 22px;
+                }
+                p {
+                    float: left;
+                    span {
+                        display: block;
+                        text-align: center;
+                        font-weight: 900;
+                        width: 23px;
+                        height: 23px;
+                        line-height: 23px;
+                        box-sizing: border-box;
+                        border: 1px solid #a4a4a4;
+                        background-color: white;
+                    }
+                }
+            }
+            .add-gowuche {
+                display: inline-block;
+                background: #fc600c;
+                width: 172px;
+                height: 46px;
+                font-size: 18px;
+                line-height: 46px;
+                text-align: center;
+                color: #fff;
+                border-radius: 2px;
+                border: 0;
+                cursor: pointer;
+                text-align: center;
+                vertical-align: middle;
             }
         }
     }
