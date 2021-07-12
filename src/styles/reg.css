@@ -1,0 +1,91 @@
+@charset 'utf-8';
+@import 'library/reset.css';
+.warpper {
+  width: 1200px;
+  margin: 0 auto;
+}
+.head {
+  background: rgba(0, 0, 0, 0.05);
+}
+.head .logo {
+  display: inline-block;
+  vertical-align: middle;
+}
+.head .logo img {
+  width: 108px;
+}
+.head b {
+  width: 1px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  background: rgba(0, 0, 0, 0.2);
+  margin: 14px 16px;
+}
+.head span {
+  line-height: 48px;
+  color: #191919;
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  vertical-align: middle;
+}
+.main h1 {
+  padding: 70px 0 0 0;
+  text-align: center;
+  font-size: 32px;
+}
+.main p {
+  text-align: center;
+  padding: 20px 0 40px 0;
+  font-size: 18px;
+}
+.main p a {
+  color: #007dff;
+  font-size: 18px;
+}
+.main .reg input {
+  box-sizing: border-box;
+  outline: 0;
+  height: 48px;
+  line-height: 48px;
+  font-size: 14px;
+  color: #191919;
+  padding: 0 16px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.05);
+  display: block;
+  margin: 0 auto;
+  width: 35%;
+  margin-top: 20px;
+}
+.main .reg input[type='button'] {
+  width: 25%;
+  margin-top: 35px;
+  font-size: 18px;
+  line-height: 18px;
+  background: #007dff;
+  color: white;
+  opacity: 0.38;
+}
+.main .reg input:focus {
+  border: 1px solid #007dff;
+}
+.foot {
+  margin-top: 45px;
+  padding: 35px 0 25px 0;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.foot p {
+  text-align: center;
+  font-size: 14px;
+}
+.foot p:nth-of-type(2) {
+  opacity: 0.3;
+  padding: 15px;
+}
+.foot p span {
+  opacity: 0.3;
+  padding: 0 10px;
+}
