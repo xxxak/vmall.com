@@ -9,7 +9,6 @@
 .main {
     position: relative;
     z-index: 98;
-    overflow: hidden;
 }
 @import './library/reset.css';
 @import './library/top-bar.less'; //tob-bar
@@ -28,25 +27,51 @@
     .scale {
         float: left;
         width: 37.5%;
-        background-color: wheat;
+
         height: 600px;
         .small {
             width: 100%;
-            background-color: yellowgreen;
 
             img {
                 width: 100%;
             }
         }
-        > ul {
-            width: 360px;
-            margin: 0 auto;
-            li {
-                width: 60px;
-                float: left;
-                img {
-                    width: 100%;
+        .slider {
+            position: relative;
+            margin-top: 20px;
+            ul {
+                width: 380px;
+                margin: 0 auto;
+                li {
+                    box-sizing: border-box;
+                    width: 70px;
+                    float: left;
+                    padding: 10px;
+                    img {
+                        width: 100%;
+                    }
+                    &:hover {
+                        border: 1px solid red;
+                    }
                 }
+            }
+            .left-bt,
+            .right-bt {
+                font-size: 25px;
+                position: absolute;
+
+                top: 50%;
+                transform: translateY(-50%);
+                color: rgb(156, 156, 156);
+                &:hover {
+                    color: rgb(194, 194, 194);
+                }
+            }
+            .left-bt {
+                left: 10px;
+            }
+            .right-bt {
+                right: 10px;
             }
         }
     }
@@ -55,7 +80,7 @@
             padding: 5px 0;
         }
         float: left;
-        background-color: yellow;
+
         width: 62.5%;
         height: 600px;
         .product-info {
@@ -115,7 +140,7 @@
             border-top: 1px solid #a4a4a4;
             padding-top: 20px;
             height: 275px;
-            background-color: chartreuse;
+
             label {
                 display: inline-block;
                 width: 90px;
@@ -171,7 +196,6 @@
         .add {
             padding-left: 15px;
             .num {
-                background-color: chartreuse;
                 vertical-align: middle;
                 float: left;
                 margin-right: 10px;
@@ -201,7 +225,7 @@
             }
             .add-gowuche {
                 display: inline-block;
-                background: #fc600c;
+
                 width: 172px;
                 height: 46px;
                 font-size: 18px;
@@ -213,6 +237,301 @@
                 cursor: pointer;
                 text-align: center;
                 vertical-align: middle;
+            }
+        }
+    }
+}
+.product-tab {
+    padding: 10px 0;
+    margin: 16px 0;
+    border: top 1px solid #a4a4a4;
+    position: sticky;
+    background-color: white;
+    top: 0;
+    p {
+        text-align: center;
+        a {
+            display: inline-block;
+            margin: 0 25px;
+            font-size: 18px;
+            padding: 0 10px 6px 10px;
+            color: #a4a4a4;
+            position: relative;
+            &:hover {
+                color: red;
+                &::after {
+                    content: '';
+                    width: 100%;
+                    height: 2px;
+                    display: block;
+                    background: rgb(255, 1, 1);
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.product-introduce {
+    .details {
+        img {
+            width: 100%;
+        }
+    }
+    // 规格参数
+    .parameter {
+        margin-top: 60px;
+        .title {
+            p {
+                font-size: 18px;
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 14px;
+                position: relative;
+                padding-left: 14px;
+                &::before {
+                    content: '';
+                    width: 4px;
+                    height: 23px;
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 1px;
+                    background: #ca141d;
+                }
+            }
+        }
+        .p-content {
+            padding-top: 30px;
+            h1 {
+                float: left;
+                width: 150px;
+                font-size: 24px;
+                color: #333;
+            }
+            ul {
+                float: left;
+                width: 1050px;
+                li {
+                    margin-bottom: 24px;
+                    span {
+                        width: 15%;
+                        display: inline-block;
+                        color: #333;
+                        font-size: 16px;
+                        vertical-align: top;
+                        box-sizing: border-box;
+                        &:nth-of-type(2) {
+                            box-sizing: border-box;
+                            width: 45%;
+                            padding-right: 100px;
+                        }
+                        &:nth-of-type(3) {
+                            width: 35%;
+                            color: #999;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 包装与售后
+    .package {
+        .title {
+            p {
+                font-size: 18px;
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 14px;
+                position: relative;
+                padding-left: 14px;
+                &::before {
+                    content: '';
+                    width: 4px;
+                    height: 23px;
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 1px;
+                    background: #ca141d;
+                }
+            }
+        }
+        .pk-content {
+            padding: 34px 50px 53px 130px;
+            p {
+                width: 25%;
+                float: left;
+                position: relative;
+                text-indent: 15px;
+                font-size: 14px;
+                color: #3a3a3a;
+                padding-bottom: 20px;
+                &::before {
+                    content: '';
+                    width: 6px;
+                    height: 6px;
+                    display: block;
+                    border-radius: 3px;
+                    background: #d8d8d8;
+                    position: absolute;
+                    top: 6px;
+                    left: 0;
+                }
+            }
+        }
+    }
+    .after-sale {
+        p {
+            font-size: 14px;
+            color: #3a3a3a;
+        }
+        .title {
+            p {
+                font-size: 18px;
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 14px;
+                position: relative;
+                padding-left: 14px;
+                &::before {
+                    content: '';
+                    width: 4px;
+                    height: 23px;
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 1px;
+                    background: #ca141d;
+                }
+            }
+        }
+        .as-content {
+            padding: 34px 50px 53px 130px;
+            p {
+                position: relative;
+                text-indent: 15px;
+                font-size: 14px;
+                color: #3a3a3a;
+                &::before {
+                    content: '';
+                    width: 6px;
+                    height: 6px;
+                    display: block;
+                    border-radius: 3px;
+                    background: #d8d8d8;
+                    position: absolute;
+                    top: 6px;
+                    left: 0;
+                }
+            }
+        }
+    }
+    // 评分与评论
+    .product-score {
+        margin-top: 60px;
+        padding: 25px 0;
+        border-top: 1px solid #bbbbbb;
+        .score {
+            float: left;
+            text-align: center;
+            p {
+                text-align: center;
+                span {
+                    color: #ca141d;
+                    display: inline-block;
+                    font-size: 56px;
+                    height: 50px;
+                    line-height: 50px;
+                    text-align: center;
+                    margin-bottom: 12px;
+                }
+                em {
+                    color: #ca141d;
+                    font-size: 16px;
+                    line-height: 50px;
+                    text-align: center;
+                }
+            }
+            i {
+                display: block;
+                text-align: center;
+                padding-right: 17px;
+                line-height: 14px;
+            }
+        }
+        .comment-tap {
+            float: right;
+            width: 88%;
+            ul {
+                li {
+                    float: left;
+                    a {
+                        display: inline-block;
+                        line-height: 32px;
+                        font-size: 14px;
+                        padding: 0 8px;
+                        height: 32px;
+                        color: #333;
+                        display: block;
+                        background-color: #f5f5f5;
+                        border-radius: 2px;
+                        margin: 0 10px 10px 0;
+                    }
+                }
+            }
+        }
+    }
+    .comment {
+        .comments {
+            border-top: 1px solid #bbb;
+            border-bottom: 1px dashed #bbb;
+            padding-left: 5px;
+            a {
+                font-size: 14px;
+                color: #333;
+                height: 50px;
+                line-height: 50px;
+                margin-right: 10px;
+            }
+        }
+        .comment-details {
+            .person-comment {
+                padding: 20px 0;
+                .c-left {
+                    float: left;
+                    width: 10%;
+                    p {
+                        text-indent: 25px;
+                        padding: 10px;
+                    }
+                    img {
+                        border-radius: 50%;
+                    }
+                }
+                .c-right {
+                    width: 80%;
+                    float: left;
+                    h1 {
+                        i {
+                            color: red;
+                        }
+                        span {
+                            float: right;
+                            color: #a4a4a4;
+                            font-size: 14px;
+                        }
+                    }
+                    p {
+                        &:nth-of-type(1) {
+                            color: #000;
+                            padding: 10px 0 50px;
+                        }
+                        &:nth-of-type(2) {
+                            color: #a4a4a4;
+                        }
+                    }
+                }
             }
         }
     }
