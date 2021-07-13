@@ -1,13 +1,31 @@
 .recommend {
     position: relative;
+    height: 400px;
+    overflow: hidden;
     ul {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 6000px;
         li {
             float: left;
-            width: 19%;
+            width: 228px;
             text-align: center;
+            box-shadow: 0 0 3px 0 rgba(63, 45, 45, 0.1);
+
             &:nth-of-type(n + 2) {
                 margin-left: 15px;
             }
+            &:nth-of-type(6) {
+                margin-left: 0;
+            }
+            &:nth-of-type(11) {
+                margin-left: 0;
+            }
+            &:nth-of-type(16) {
+                margin-left: 0;
+            }
+
             div {
                 box-shadow: 0 1px 8px rgb(0 0 0 / 6%);
                 border-radius: 10px;
@@ -15,6 +33,7 @@
                     width: 70%;
                     padding: 30px 0;
                     margin: 10px auto;
+                    margin-top: 0;
                 }
                 p {
                     background: #f3f3f3;
@@ -52,6 +71,7 @@
     .left-but {
         left: 0;
         border-radius: 0 8px 8px 0;
+        display: none;
     }
     .right-but {
         right: 0;
@@ -61,13 +81,44 @@
 // 小轮播图
 .small-slider {
     margin-top: 40px;
-    ul li {
-        float: left;
-        width: 100px;
-        img {
-            border-radius: 10px;
-            width: 1200px;
-            height: 120px;
+    position: relative;
+    ul {
+        height: 120px;
+        position: relative;
+        z-index: 299;
+        li {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100px;
+            transition: all 0.3s;
+            img {
+                transition: all 0.3s;
+                border-radius: 10px;
+                width: 1200px;
+                height: 120px;
+            }
+        }
+    }
+    p {
+        .show {
+            background: white;
+        }
+        position: absolute;
+        right: 5px;
+        top: 100px;
+        z-index: 300;
+        span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 1px solid white;
+            margin-left: 5px;
+            &:hover {
+                .show();
+            }
         }
     }
 }

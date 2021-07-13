@@ -1,13 +1,31 @@
 .recommend {
   position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+.recommend ul {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 6000px;
 }
 .recommend ul li {
   float: left;
-  width: 19%;
+  width: 228px;
   text-align: center;
+  box-shadow: 0 0 3px 0 rgba(63, 45, 45, 0.1);
 }
 .recommend ul li:nth-of-type(n + 2) {
   margin-left: 15px;
+}
+.recommend ul li:nth-of-type(6) {
+  margin-left: 0;
+}
+.recommend ul li:nth-of-type(11) {
+  margin-left: 0;
+}
+.recommend ul li:nth-of-type(16) {
+  margin-left: 0;
 }
 .recommend ul li div {
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
@@ -17,6 +35,7 @@
   width: 70%;
   padding: 30px 0;
   margin: 10px auto;
+  margin-top: 0;
 }
 .recommend ul li div p {
   background: #f3f3f3;
@@ -51,6 +70,7 @@
 .recommend .left-but {
   left: 0;
   border-radius: 0 8px 8px 0;
+  display: none;
 }
 .recommend .right-but {
   right: 0;
@@ -58,13 +78,44 @@
 }
 .small-slider {
   margin-top: 40px;
+  position: relative;
+}
+.small-slider ul {
+  height: 120px;
+  position: relative;
+  z-index: 299;
 }
 .small-slider ul li {
-  float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100px;
+  transition: all 0.3s;
 }
 .small-slider ul li img {
+  transition: all 0.3s;
   border-radius: 10px;
   width: 1200px;
   height: 120px;
+}
+.small-slider p {
+  position: absolute;
+  right: 5px;
+  top: 100px;
+  z-index: 300;
+}
+.small-slider p .show {
+  background: white;
+}
+.small-slider p span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid white;
+  margin-left: 5px;
+}
+.small-slider p span:hover {
+  background: white;
 }
