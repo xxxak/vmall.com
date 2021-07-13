@@ -5,8 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
     <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/library/slider.css">
+    <link rel="stylesheet" href="../styles/library/side-bar.css">
+    <script src="../js/index.js" type="module"></script>
+<script>
+   
+</script>
 </head>
 
 <body>
@@ -194,14 +199,29 @@
     <div class="main">
         <!-- 轮播图（浮动到main-顶部-底部） -->
         <div class="slider">
-            <ul>
+            <!-- <ul>
                 <li><img src="../img/25275055942615057252.jpg" alt="" /></li>
                 <li><img src="../img/56069032652613096065.jpg" alt="" /></li>
                 <li><img src="../img/87343952752615934378.jpg" alt="" /></li>
                 <li><img src="../img/61027731452613772016.png" alt="" /></li>
+            </ul> -->
+            <div>
+                <img src="../img/scale/25275055942615057252.jpg" alt="">
+                 <img src="../img/scale/56069032652613096065.jpg" alt="">
+                 <img src="../img/scale/61027731452613772016.png" alt="">
+                </div>
+    
+    
+            <span>&lt;</span>
+            <span>&gt;</span>
+            <ul>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
             </ul>
         </div>
-        <!-- 侧边栏导航 -->
+        侧边栏导航
+        
         <div class="side-bar warpper">
             <ul>
                 <li><a href="">手机</a> <i class="iconfont icon-arrow-right"></i>
@@ -649,7 +669,6 @@
 
             </div>
         </div>
-
     </div>
     <!-- 底部 -->
     <div class="footer warrper ">
@@ -759,7 +778,5 @@
     <!-- 右侧悬挂导航 -->
     <div class="hung-bar"></div>
 </body>
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
-
 
 </html>

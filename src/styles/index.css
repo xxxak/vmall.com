@@ -1,7 +1,6 @@
 @charset 'utf-8';
 @import 'library/reset.css';
 @import 'icon/iconfont.css';
-@import 'bootstrap.min.css';
 .warpper {
   width: 1200px;
   margin: 0 auto;
@@ -10,6 +9,7 @@
   position: relative;
   z-index: 98;
   overflow: hidden;
+  height: 1800px;
 }
 .warpper {
   width: 1200px;
@@ -327,112 +327,6 @@
 .header .warpper .right-search div p:nth-last-of-type(1) {
   border-radius: 0 0 8px 8px;
 }
-.slider {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  z-index: 98;
-  transform: translateX(-50%);
-  background-color: #eeeeee;
-  width: 1920px;
-  overflow-y: auto;
-}
-.slider ul {
-  width: 8000px;
-}
-.slider ul > li {
-  float: left;
-}
-.slider ul > li img {
-  border-radius: 0 0 50% 50%/0 0 150px 150px;
-}
-.side-bar {
-  position: relative;
-  z-index: 99;
-  padding: 1px 0 0;
-}
-.side-bar > ul {
-  margin-top: 20px;
-  width: 200px;
-  background-color: white;
-  border-radius: 8px;
-  position: relative;
-}
-.side-bar > ul:hover {
-  border-radius: 8px 0 0 8px;
-  background-color: #ece9e9;
-}
-.side-bar > ul > li {
-  padding: 0 16px;
-}
-.side-bar > ul > li a,
-.side-bar > ul > li i {
-  line-height: 36px;
-  color: #848484;
-}
-.side-bar > ul > li i {
-  float: right;
-}
-.side-bar > ul > li:nth-of-type(1) {
-  border-radius: 8px 8px 0 0;
-}
-.side-bar > ul > li:nth-of-type(1):hover {
-  border-radius: 8px 0 0 0;
-}
-.side-bar > ul > li:nth-last-of-type(1) {
-  border-radius: 0 0 8px 8px;
-}
-.side-bar > ul > li:nth-last-of-type(1):hover {
-  border-radius: 0 0 0 8px;
-}
-.side-bar > ul > li .side-bar-sub {
-  display: none;
-}
-.side-bar > ul > li:hover {
-  background-color: white;
-}
-.side-bar > ul > li:hover .side-bar-sub {
-  display: block;
-  position: absolute;
-  left: 200px;
-  top: 0;
-}
-.side-bar > ul > li:hover .side-bar-sub ul {
-  background-color: white;
-  height: 430px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding-top: 2px;
-  width: 200%;
-  border-radius: 0 8px 8px 0;
-}
-.side-bar > ul > li:hover .side-bar-sub ul li {
-  box-sizing: border-box;
-  padding: 11px 30px;
-}
-.side-bar > ul > li:hover .side-bar-sub ul li > div {
-  width: 250px;
-  background-color: white;
-  margin: auto;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-.side-bar > ul > li:hover .side-bar-sub ul li > div .side-img {
-  float: left;
-}
-.side-bar > ul > li:hover .side-bar-sub ul li > div .side-img img {
-  width: 50px;
-}
-.side-bar > ul > li:hover .side-bar-sub ul li > div span {
-  margin-left: 5px;
-  display: inline-block;
-  line-height: 50px;
-}
-.side-bar > ul > li:hover .side-bar-sub ul li > div:hover {
-  background-color: #f1f1f1;
-  cursor: pointer;
-}
 .row {
   margin-right: 0;
   margin-left: 0;
@@ -543,7 +437,7 @@
 }
 .home-channel .gonggao {
   border-left: 1px solid #e3e3e3;
-  width: 22.5%;
+  width: 22%;
   height: 100%;
 }
 .home-channel .gonggao p {
