@@ -525,27 +525,63 @@
   font-size: 12px;
   color: #666;
 }
+.hide {
+  display: none;
+}
 .product {
   margin-top: 10px;
 }
 .product .scale {
   float: left;
   width: 37.5%;
+  position: relative;
   height: 600px;
 }
 .product .scale .small {
   width: 100%;
+  position: relative;
+  border: 1px solid black;
 }
 .product .scale .small img {
   width: 100%;
 }
+.product .scale .small .movebox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* width: 100px;
+                height: 100px; */
+  background-color: #ff0000;
+  opacity: 0.2;
+  border: 1px solid #ccc;
+  cursor: move;
+  pointer-events: none;
+}
+.product .scale .big {
+  width: 450px;
+  height: 450px;
+  float: left;
+  border: 1px solid #ccc;
+  position: absolute;
+  left: 500px;
+  top: 100px;
+  overflow: hidden;
+}
+.product .scale .big img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 900px;
+  height: 900px;
+}
 .product .scale .slider {
   position: relative;
-  margin-top: 20px;
+  margin-top: 20px 35px;
 }
 .product .scale .slider ul {
   width: 380px;
   margin: 0 auto;
+  position: absolute;
 }
 .product .scale .slider ul li {
   box-sizing: border-box;

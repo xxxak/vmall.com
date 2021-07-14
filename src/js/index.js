@@ -1,10 +1,10 @@
 import $ from './library/jquery.js';
-//轮播图
 
 $(function () {
-    console.log($('.slider').slider());
+    //轮播图
+    //  console.log($('.slider').slider());
     let jianto = $('.slider span');
-    console.log($('.side-bar>ul>li'));
+    //  console.log($('.side-bar>ul>li'));
     $('.side-bar>ul>li').hover(
         function () {
             jianto.css('z-index', '99');
@@ -15,7 +15,6 @@ $(function () {
     );
 
     // 公告上下滚动
-
     let count = 0;
     let timer;
     // gs.css('transition', 'all 1.5s');
@@ -37,7 +36,7 @@ $(function () {
     let jingping = $('.jinping-re');
     let left = 0;
     rightBut.on('click', function () {
-        console.log(parseInt(jingping.css('left').slice(0, -2)));
+        //  console.log(parseInt(jingping.css('left').slice(0, -2)));
         jingping.animate(
             {
                 left: `${-1200 + left}px`,
@@ -45,7 +44,7 @@ $(function () {
             200,
             function () {
                 left += -1200;
-                console.log(left);
+                //   console.log(left);
             }
         );
     });
@@ -77,6 +76,7 @@ $(function () {
             leftBut.css('display', 'block');
         }
     });
+    // 小轮播图
     let time = null;
     let sl = $('.small-slider');
     let point = $('.small-slider p span');
@@ -105,12 +105,32 @@ $(function () {
     // 不要用mouseout mousein 冒泡干扰
     sl.on('mouseleave', function () {
         timerout = setTimeout(start, 1000);
-        console.log(1);
+        //  console.log(1);
     });
     sl.on('mouseenter', function () {
-        console.log('mosueenter');
+        //   console.log('mosueenter');
         end();
         clearTimeout(timerout);
         timerout = null;
     });
+
+    // 首页商品信息渲染
+    $.ajax({
+        type: 'get',
+        url: '../../interface/getData.php',
+        dataType: 'json',
+    })
+        .then(function (data) {
+            console.log(data);
+            var productList = $('.hot-item .right-itme-list ul li');
+            console.log(productList[0]);
+
+            data.forEach((elm, i) => {
+                let picture = JSON.parse(elm.picture);
+                productList;
+            });
+        })
+        .catch(function (xhr) {
+            console.log(xhr.status);
+        });
 });

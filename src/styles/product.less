@@ -22,26 +22,60 @@
 }
 // 商品放大镜和属性选择
 // 放大镜
+.hide {
+    display: none;
+}
 .product {
     margin-top: 10px;
     .scale {
         float: left;
         width: 37.5%;
-
+        position: relative;
         height: 600px;
         .small {
             width: 100%;
-
+            position: relative;
+            border: 1px solid black;
             img {
                 width: 100%;
+            }
+            .movebox {
+                position: absolute;
+                top: 0;
+                left: 0;
+                /* width: 100px;
+                height: 100px; */
+                background-color: rgb(255, 0, 0);
+                opacity: 0.2;
+                border: 1px solid #ccc;
+                cursor: move;
+                pointer-events: none;
+            }
+        }
+        .big {
+            width: 450px;
+            height: 450px;
+            float: left;
+            border: 1px solid #ccc;
+            position: absolute;
+            left: 500px;
+            top: 100px;
+            overflow: hidden;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 900px;
+                height: 900px;
             }
         }
         .slider {
             position: relative;
-            margin-top: 20px;
+            margin-top: 20px 35px;
             ul {
                 width: 380px;
                 margin: 0 auto;
+                position: absolute;
                 li {
                     box-sizing: border-box;
                     width: 70px;
