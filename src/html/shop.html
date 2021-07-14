@@ -7,6 +7,7 @@
         <title>Document</title>
         <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
         <link rel="stylesheet" href="../styles/shop.css" />
+        <script src="../js/shop.js" type="module"></script>
     </head>
 
     <body>
@@ -173,7 +174,7 @@
             <!-- 购物车列表 -->
             <div class="shop-car-list warpper">
                 <ul>
-                    <li class="item clearfix">
+                    <!-- <li class="item clearfix">
                         <div>
                             <input type="checkbox" />
                             <img src="../img/side-img1.png" alt="" />
@@ -194,29 +195,7 @@
                             <li><span>¥ 10999.00</span></li>
                             <li><a href="">删除</a></li>
                         </ul>
-                    </li>
-                    <li class="item clearfix">
-                        <div>
-                            <input type="checkbox" />
-                            <img src="../img/side-img1.png" alt="" />
-                        </div>
-                        <ul class="sub">
-                            <li>
-                                <p>HUAWEI Mate 40 RS保时捷设计 5G 全网通 8GB+256GB</p>
-                                <p>（陶瓷白） 陶瓷白 5G全网通 8GB+256GB 官方标配</p>
-                            </li>
-                            <li><span>¥ 10999.00</span></li>
-                            <li>
-                                <section>
-                                    <span>+</span>
-                                    <input type="text" readonly value="1" />
-                                    <span>-</span>
-                                </section>
-                            </li>
-                            <li><span>¥ 10999.00</span></li>
-                            <li><a href="">删除</a></li>
-                        </ul>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <!-- 购物车结算 -->
@@ -234,9 +213,9 @@
                         <i>¥ 1899.00</i>
                         <span>总计 :</span>
                     </p>
-                    <div>
+                    <div class="">
                         已选择
-                        <em>1</em>
+                        <em class="quantity">1</em>
                         件商品，优惠： ¥ 0.00
                     </div>
                 </div>

@@ -593,3 +593,7 @@
 .top-bar a:hover {
   color: red !important;
 }
+.reduce,
+.add {
+  cursor: pointer;
+}

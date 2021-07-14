@@ -1,4 +1,5 @@
 import $ from './library/jquery.js';
+import cookie from './library/cookie.js';
 $(function () {
     // 放大镜
     let small = $('.small'),
@@ -67,26 +68,14 @@ $(function () {
             $('.slider ul li img').each(function (i) {
                 $(this).attr('src', `${picture[i].src}.png`);
             });
+            $('.add-gowuche').on('click', function () {
+                console.log(1);
+                addItem(res.id, res.price, $('.num input').val());
+            });
         })
         .catch(function (xhr) {
             console.log(xhr.status);
         });
-
-    //图片展示左右移动
-    let slider = $('.slider ul');
-    let moveDisdence = $('.slider ul li').outerWidth();
-    console.log(moveDisdence);
-    let leftbt = $('.left-bt');
-    let rightbt = $('.right-bt');
-    leftbt.on('click', function () {
-        console.log(slider);
-        slider.animate({ left: `0px` }, 100);
-    });
-    rightbt.on('click', function () {
-        console.log(slider);
-        slider.animate({ left: `-${moveDisdence}` }, 100);
-    });
-
     // 添加购物车
     function addItem(id, price, num) {
         let shop = cookie.get('shop'); // 获得购物车信息
@@ -119,4 +108,18 @@ $(function () {
 
         cookie.set('shop', JSON.stringify(shop), 1);
     }
+    //图片展示左右移动
+    let slider = $('.slider ul');
+    let moveDisdence = $('.slider ul li').outerWidth();
+    console.log(moveDisdence);
+    let leftbt = $('.left-bt');
+    let rightbt = $('.right-bt');
+    leftbt.on('click', function () {
+        console.log(slider);
+        slider.animate({ left: `0px` }, 100);
+    });
+    rightbt.on('click', function () {
+        console.log(slider);
+        slider.animate({ left: `-${moveDisdence}` }, 100);
+    });
 });

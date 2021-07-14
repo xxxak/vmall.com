@@ -1045,3 +1045,8 @@
 .product-introduce .comment .comment-details .person-comment .c-right p:nth-of-type(2) {
   color: #a4a4a4;
 }
+.reduce,
+.add {
+  cursor: pointer;
+  background-color: red !important;
+}
