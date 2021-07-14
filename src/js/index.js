@@ -1,5 +1,6 @@
 import $ from './library/jquery.js';
-//
+//轮播图
+
 $(function () {
     console.log($('.slider').slider());
     let jianto = $('.slider span');
@@ -76,26 +77,15 @@ $(function () {
             leftBut.css('display', 'block');
         }
     });
-
-    // 小轮播图
-    // 防抖
-    // function debounce(fn, delay) {
-    //     let timer = null; //借助闭包
-    //     return function () {
-    //         if (timer) {
-    //             clearTimeout(timer);
-    //         }
-    //         timer = setTimeout(fn, delay); // 简化写法
-    //     };
-    // }
     let time = null;
+    let sl = $('.small-slider');
     let point = $('.small-slider p span');
     let slPic = $('.small-slider ul li');
     let start = function () {
         time = setInterval(function () {
             let index = point.parent().find('.show').index();
             index = index > 2 ? 0 : index + 1;
-            slPic.eq(index).fadeIn(200).siblings().fadeOut(400);
+            slPic.eq(index).fadeIn(500).siblings().fadeOut(500);
             point.eq(index).addClass('show').siblings().removeClass();
         }, 1000);
     };
@@ -103,16 +93,24 @@ $(function () {
         clearInterval(time);
         time = null;
     };
-    start();
-    let timerout = null;
-    // console.log(point);
-    point.hover(function () {
+    let timerout = setTimeout(start, 1000);
+    point.on('mouseenter', function () {
         end();
-        slPic.eq($(this).index()).fadeIn(200).siblings().fadeOut(400);
+        slPic.eq($(this).index()).fadeIn(500).siblings().fadeOut(500);
         $(this).addClass('show').siblings().removeClass();
-        if (timerout) {
-            clearTimeout(timerout);
-            timerout = setTimeout(start, 1000);
-        }
+    });
+    // point.on('mouseout', function () {
+    //     timerout = setTimeout(start, 1000);
+    // });
+    // 不要用mouseout mousein 冒泡干扰
+    sl.on('mouseleave', function () {
+        timerout = setTimeout(start, 1000);
+        console.log(1);
+    });
+    sl.on('mouseenter', function () {
+        console.log('mosueenter');
+        end();
+        clearTimeout(timerout);
+        timerout = null;
     });
 });

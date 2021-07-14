@@ -1,1 +1,1 @@
-console.log('product');
+import $ from './library/jquery.js';
