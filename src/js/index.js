@@ -123,11 +123,22 @@ $(function () {
         .then(function (data) {
             console.log(data);
             var productList = $('.hot-item .right-itme-list ul li');
+            var imgs = $('.hot-item .right-itme-list ul li img');
+            var p = $('.hot-item .right-itme-list ul li p');
+            var price = $('.hot-item .right-itme-list ul li i');
+            var span = $('.hot-item .right-itme-list ul li span');
             console.log(productList[0]);
 
             data.forEach((elm, i) => {
                 let picture = JSON.parse(elm.picture);
-                productList;
+                console.log(picture[0].src);
+                console.log(imgs[i]);
+                $(imgs[i]).attr('src', `${picture[0].src}.png`);
+                $(p[i]).replaceWith(`<p>${elm.title}</p>`);
+                $(price[i]).replaceWith(`<i>${elm.price}</i>`);
+                $(span[i]).replaceWith(`<span>${elm.details}</span>`);
+
+                //  imgs[i].append(picture[0].title);
             });
         })
         .catch(function (xhr) {

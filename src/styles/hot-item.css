@@ -30,6 +30,9 @@
   transition: all 0.3s;
   color: #3a3a3a;
 }
+.hot-item-content .right-itme-list ul li p {
+  font-size: 14px;
+}
 .hot-item-content .right-itme-list ul li img {
   width: 100%;
   border-radius: 10px;
