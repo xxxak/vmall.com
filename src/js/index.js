@@ -2,7 +2,8 @@ import $ from './library/jquery.js';
 
 $(function () {
     //轮播图
-    //  console.log($('.slider').slider());
+    console.log($('.slider'));
+    $('.slider').slider();
     let jianto = $('.slider span');
     //  console.log($('.side-bar>ul>li'));
     $('.side-bar>ul>li').hover(

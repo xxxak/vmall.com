@@ -43,7 +43,7 @@ $(function () {
                         <li>
                             <section>
                                 <span class="reduce">-</span>
-                                <input type="text" value="${current[0].num}" />
+                                <input  data-id="${el.id}" type="text" value="${current[0].num}" />
                                 <span class="add">+</span>
                             </section>
                         </li>
@@ -59,11 +59,9 @@ $(function () {
                     .html(tempString)
                     .find('.removeitem')
                     .on('click', function () {
-                        console.log($(this).attr('data-id'));
                         let res = shop.filter(el => {
                             return parseInt(el.id) !== parseInt($(this).attr('data-id'));
                         });
-                        console.log(res, shop);
                         cookie.set('shop', JSON.stringify(res), 1);
                         location.reload();
                     });
@@ -72,16 +70,18 @@ $(function () {
                 $('.quantity').html(`￥${quantity}`);
                 // 购物车加减
                 $('.add').on('click', function () {
-                    console.log($('.item').attr('data-id'));
-                    console.log($('.price').attr('data-price'));
-                    addItem($('.item').attr('data-id'), $('.price').attr('data-price'), 1);
+                    let inputItem = $(this).parent().find('input');
+                    addItem(inputItem.attr('data-id'), $('.price').attr('data-price'), 1);
                     location.reload();
                 });
                 $('.reduce').on('click', function () {
-                    console.log($('.item').attr('data-id'));
-                    console.log($('.price').attr('data-price'));
-                    addItem($('.item').attr('data-id'), $('.price').attr('data-price'), -1);
-                    location.reload();
+                    let inputItem = $(this).parent().find('input');
+                    if (inputItem.val() == 1) {
+                        alert('no 0');
+                    } else {
+                        addItem(inputItem.attr('data-id'), $('.price').attr('data-price'), -1);
+                        location.reload();
+                    }
                 });
             })
             .catch(function (xhr) {
