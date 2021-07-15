@@ -4,9 +4,7 @@ $(function () {
     let shop = cookie.get('shop');
     if (shop) {
         shop = JSON.parse(shop);
-
         let idList = shop.map(el => el.id).join();
-
         $.ajax({
             type: 'get',
             url: '../../interface/getItems.php',
@@ -17,7 +15,6 @@ $(function () {
         })
             .then(function (res) {
                 console.log(res);
-
                 let tempString = '';
                 let total = 0;
                 let quantity = 0;
@@ -63,40 +60,40 @@ $(function () {
                             return parseInt(el.id) !== parseInt($(this).attr('data-id'));
                         });
                         cookie.set('shop', JSON.stringify(res), 1);
-                        location.reload();
+
+                        // location.reload();
                     });
                 // 购物车汇总
                 $('.totol-price i').html(`￥${total}.00`);
                 $('.quantity').html(`￥${quantity}`);
                 // 购物车加减
+
                 $('.add').on('click', function () {
                     let inputItem = $(this).parent().find('input');
                     addItem(inputItem.attr('data-id'), $('.price').attr('data-price'), 1);
                     location.reload();
                 });
-                $('.reduce').on('click', function () {
-                    let inputItem = $(this).parent().find('input');
-                    if (inputItem.val() == 1) {
-                        alert('no 0');
-                    } else {
-                        addItem(inputItem.attr('data-id'), $('.price').attr('data-price'), -1);
-                        location.reload();
-                    }
-                });
+                // $('.reduce').on('click', function () {
+                //     let inputItem = $(this).parent().find('input');
+                //     if (inputItem.val() == 1) {
+                //         alert('no 0');
+                //     } else {
+                //         addItem(inputItem.attr('data-id'), $('.price').attr('data-price'), -1);
+                //         location.reload();
+                //     }
+                // });
             })
             .catch(function (xhr) {
-                console.log(xhr.status);
+                console.log('1', xhr.status);
             });
     }
     function addItem(id, price, num) {
         let shop = cookie.get('shop'); // 获得购物车信息
-
         let product = {
             id,
             price,
             num,
         };
-
         // 判断当前cookie中是否存有购物车数据
         if (shop) {
             // 如果有数据 数据将是字符串格式

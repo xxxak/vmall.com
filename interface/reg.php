@@ -21,9 +21,8 @@ $res = $mysqli->query($sql);
 
 // 判断用户名存在的情况
 if($res->num_rows>0){
-    echo '<script>alert("用户名已存在");</script>';
-    echo $email;
-    echo $phone;
+    echo 'false';
+  
    // echo '<script>location.href="../eg02.reg.html";</script>';
     $mysqli->close(); // 断开连接
     die();
@@ -41,8 +40,7 @@ $result = $mysqli->query($insert); // 返回布尔值
 $mysqli->close();
 
 if($result){
-    echo '<script>alert("注册成功");</script>';
-    echo '<script>location.href="https://www.baidu.com";</script>';
+   echo 'ture';
 }
 
 ?>

@@ -40,6 +40,16 @@
 .hot-item-content .right-itme-list ul li i {
   display: block;
 }
+.hot-item-content .right-itme-list ul li span {
+  height: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .hot-item-content .right-itme-list ul li:hover {
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
 }

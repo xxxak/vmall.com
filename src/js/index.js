@@ -103,7 +103,7 @@ $(function () {
     // point.on('mouseout', function () {
     //     timerout = setTimeout(start, 1000);
     // });
-    // 不要用mouseout mousein 冒泡干扰
+    // 不要用mouseout mousein 会冒泡干扰
     sl.on('mouseleave', function () {
         timerout = setTimeout(start, 1000);
         //  console.log(1);
@@ -132,15 +132,10 @@ $(function () {
 
             data.forEach((elm, i) => {
                 let picture = JSON.parse(elm.picture);
-                console.log(picture[0].src);
-                console.log(imgs[i]);
                 $(imgs[i]).attr('data-original', `${picture[0].src}.png`);
                 $(p[i]).replaceWith(`<p>${elm.title}</p>`);
                 $(price[i]).replaceWith(`<i>${elm.price}</i>`);
                 $(span[i]).replaceWith(`<span>${elm.details}</span>`);
-                //   console.log($('img.lazy'));
-
-                //  imgs[i].append(picture[0].title);
             });
             $('img.lazy').lazyload({
                 placeholder: '../img/lazy.jpeg',

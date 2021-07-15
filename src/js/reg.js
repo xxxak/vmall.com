@@ -13,6 +13,46 @@ let flag = {
     repeatPassword: false,
     email: false,
 };
+//  用户名验证
+
+$('.username').on('blur', function () {
+    let rex = /^[a-zA-Z0-9_-]{4,16}$/; //4到16位（字母，数字，下划线，减号）";
+    if (rex.test($(this).val())) {
+        flag.username = true;
+        $('.un').html('用户名正确').css('color', 'green');
+    } else {
+        flag.username = false;
+        $('.un').html('用户名错误,4到16位（字母，数字，下划线，减号）').css('color', 'red');
+    }
+});
+//  手机号格式验证
+
+$('.phone').on('blur', function () {
+    let rex = /^(?:(?:\+|00)86)?1[3-9]\d{9}$/; //只要是13,14,15,16,17,18,19开头即可"
+
+    if (rex.test($(this).val())) {
+        flag.phone = true;
+        $('.ph').html('手机格式正确').css('color', 'green');
+    } else {
+        flag.phone = false;
+        $('.ph').html('手机格式错误').css('color', 'red');
+    }
+});
+
+//  邮箱格式验证
+
+$('.email').on('blur', function () {
+    let rex =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (rex.test($(this).val())) {
+        flag.email = true;
+        $('.yx').html('邮箱格式正确').css('color', 'green');
+    } else {
+        flag.email = false;
+        $('.yx').html('邮箱格式错误').css('color', 'red');
+    }
+});
 // 密码强度验证
 $('.password').on('focus', function () {
     $(this).on('input', function () {
@@ -45,7 +85,7 @@ $('.password').on('focus', function () {
     });
 });
 $('.password').on('blur', function () {
-    if (flag.password) $('.pw').html('');
+    if (flag.password) $('.pw').html('密码输入正确').css('color', 'green');
 });
 // 密码重复验证
 // $('.repeatPassword').on('focus', function () {
@@ -58,20 +98,28 @@ $('.repeatPassword').on('blur', function () {
             $('.rpw').html('密码输入错误').css('color', 'red');
         } else {
             flag.repeatPassword = true;
-            $('.rpw').html('密码输正确').css('color', 'green');
+            $('.rpw').html('重复密码入输正确').css('color', 'green');
         }
     } else {
         $('.rpw').html('请先输入密码').css('color', 'red');
     }
 });
 reg.on('click', function () {
-    console.log('1');
-    username = $('.username').val();
-    password = $('.password').val();
-    phone = $('.phone').val();
-    email = $('.email').val();
-    console.log(username, password, phone, email);
-    login1();
+    let isexecute = true;
+    for (let i in flag) {
+        if (!flag[i]) {
+            isexecute = false;
+        }
+    }
+    if (isexecute) {
+        username = $('.username').val();
+        password = $('.password').val();
+        phone = $('.phone').val();
+        email = $('.email').val();
+        login1();
+    } else {
+        alert('请正确填写！');
+    }
 });
 function login1() {
     $.ajax({
@@ -81,13 +129,12 @@ function login1() {
         dataType: 'html',
     })
         .then(function (res) {
-            console.log(res);
-            // if (res == 1) {
-            //     alert('用户名密码正确');
-            //     location.href = '../html/index.html';
-            // } else {
-            //     alert('用户名密码错误');
-            // }
+            if (res == 'false') {
+                alert('用户名已存在');
+            } else {
+                alert('注册成功');
+                location.href = '../html/login.html';
+            }
         })
         .catch(function (xhr) {
             console.log(xhr.status);
