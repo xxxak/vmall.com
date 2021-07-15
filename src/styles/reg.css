@@ -72,6 +72,10 @@
 .main .reg input:focus {
   border: 1px solid #007dff;
 }
+.main .reg span {
+  display: inline-block;
+  margin-left: 400px;
+}
 .foot {
   margin-top: 45px;
   padding: 35px 0 25px 0;

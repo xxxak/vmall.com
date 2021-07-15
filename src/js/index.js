@@ -1,5 +1,5 @@
 import $ from './library/jquery.js';
-
+import './library/jquery.lazyload.js';
 $(function () {
     //轮播图
     console.log($('.slider'));
@@ -134,12 +134,17 @@ $(function () {
                 let picture = JSON.parse(elm.picture);
                 console.log(picture[0].src);
                 console.log(imgs[i]);
-                $(imgs[i]).attr('src', `${picture[0].src}.png`);
+                $(imgs[i]).attr('data-original', `${picture[0].src}.png`);
                 $(p[i]).replaceWith(`<p>${elm.title}</p>`);
                 $(price[i]).replaceWith(`<i>${elm.price}</i>`);
                 $(span[i]).replaceWith(`<span>${elm.details}</span>`);
+                //   console.log($('img.lazy'));
 
                 //  imgs[i].append(picture[0].title);
+            });
+            $('img.lazy').lazyload({
+                placeholder: '../img/lazy.jpeg',
+                effect: 'fadeIn',
             });
         })
         .catch(function (xhr) {
