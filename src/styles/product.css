@@ -779,6 +779,9 @@
   text-align: center;
   vertical-align: middle;
 }
+.product .product-selected .add .add-gowuche:hover {
+  opacity: 0.5;
+}
 .product-tab {
   padding: 10px 0;
   margin: 16px 0;
@@ -1049,4 +1052,25 @@
 .reduce,
 .add {
   cursor: pointer;
+}
+html body {
+  height: 100%;
+}
+.tianjia {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.tianjia .center-box {
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 200px;
+  background-color: white;
 }

@@ -24,7 +24,7 @@ const cookie = {
     },
     remove(key) {
         this.set(key, '', -1);
-    }
-}
+    },
+};
 
 export default cookie;

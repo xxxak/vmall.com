@@ -1,6 +1,9 @@
+import cookie from './library/cookie.js';
 import $ from './library/jquery.js';
 import './library/jquery.lazyload.js';
 $(function () {
+    // console.log(cookie.get(username));
+
     //轮播图
     console.log($('.slider'));
     $('.slider').slider();

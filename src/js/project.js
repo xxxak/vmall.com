@@ -68,7 +68,7 @@ $(function () {
             $('.slider ul li img').each(function (i) {
                 $(this).attr('src', `${picture[i].src}.png`);
             });
-            
+
             $('.add-gowuche').on('click', function () {
                 console.log(1);
                 addItem(res.id, res.price, $('.num input').val());
@@ -124,5 +124,18 @@ $(function () {
     rightbt.on('click', function () {
         console.log(slider);
         slider.animate({ left: `-${moveDisdence}` }, 100);
+    });
+    // 添加购物车数量效果
+    $('.num').on('click', function (ev) {
+        if (ev.target.className == 'plus') {
+            $(this)
+                .find('input')
+                .val(parseInt($(this).find('input').val()) + 1);
+        }
+        if (ev.target.className == 'reduce' && $(this).find('input').val() != '1') {
+            $(this)
+                .find('input')
+                .val(parseInt($(this).find('input').val()) - 1);
+        }
     });
 });

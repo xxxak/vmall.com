@@ -19,6 +19,7 @@ function login1() {
         .then(function (res) {
             console.log(res, !!res);
             if (res == 1) {
+                cookie.set('usernaem', username, 1);
                 alert('用户名密码正确');
                 location.href = '../html/index.html';
             } else {

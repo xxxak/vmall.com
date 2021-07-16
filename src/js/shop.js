@@ -4,6 +4,7 @@ $(function () {
     let shop = cookie.get('shop');
     if (shop) {
         shop = JSON.parse(shop);
+        console.log(shop);
         let idList = shop.map(el => el.id).join();
         $.ajax({
             type: 'get',
@@ -63,16 +64,35 @@ $(function () {
 
                         // location.reload();
                     });
+
                 // 购物车汇总
                 $('.totol-price i').html(`￥${total}.00`);
                 $('.quantity').html(`￥${quantity}`);
-                // 购物车加减
 
-                $('.add').on('click', function () {
-                    let inputItem = $(this).parent().find('input');
-                    addItem(inputItem.attr('data-id'), $('.price').attr('data-price'), 1);
-                    location.reload();
+                // 购物车加减
+                $('.shop-car-list>ul>li').on('click', function (ev) {
+                    // let that = this;
+                    let id = $(this).find('input[type="text"]').attr('data-id');
+                    let price = $(this).find('.price').attr('data-price');
+
+                    if (ev.target.className == 'add') {
+                        addItem(id, price, 1);
+                        render(id, this);
+                    }
+                    if (
+                        ev.target.className == 'reduce' &&
+                        $(this).find('input[type="text"]').val() != '1'
+                    ) {
+                        addItem(id, price, -1);
+                        render(id, this);
+                        // location.reload();
+                    }
                 });
+                // $('.add').on('click', function () {
+                //     let inputItem = $(this).parent().find('input');
+                //     addItem(inputItem.attr('data-id'), $('.price').attr('data-price'), 1);
+                //     location.reload();
+                // });
                 // $('.reduce').on('click', function () {
                 //     let inputItem = $(this).parent().find('input');
                 //     if (inputItem.val() == 1) {
@@ -116,6 +136,24 @@ $(function () {
 
         cookie.set('shop', JSON.stringify(shop), 1);
     }
-
+    function render(id, that) {
+        let newtotal = 0;
+        let newnum = 0;
+        let newshop = cookie.get('shop');
+        newshop = JSON.parse(newshop);
+        newshop.forEach((el, i) => {
+            console.log(el);
+            newtotal += el['price'] * el['num'];
+            newnum += parseInt(el['num']);
+            if (el['id'] == id) {
+                $(that)
+                    .find('li.sum span')
+                    .html(`￥${el['price'] * el['num']}.00`);
+                $(that).find('input[type="text"]').val(`${el['num']}`);
+            }
+        });
+        $('.totol-price i').html(`￥${newtotal}.00`);
+        $('.totol-price em').html(`${newnum}`);
+    }
     // $('.reduce');
 });
