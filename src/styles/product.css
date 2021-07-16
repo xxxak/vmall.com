@@ -1057,6 +1057,7 @@ html body {
   height: 100%;
 }
 .tianjia {
+  display: none;
   position: fixed;
   z-index: 9999;
   top: 0;
@@ -1067,10 +1068,46 @@ html body {
 }
 .tianjia .center-box {
   position: relative;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
-  height: 200px;
+  width: 500px;
+  height: 220px;
+  text-align: center;
+  padding: 30px;
   background-color: white;
+}
+.tianjia .center-box p {
+  height: 30px;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 900;
+}
+.tianjia .center-box .gg {
+  display: inline-block;
+  min-width: 170px;
+  height: 44px;
+  line-height: 44px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 18px;
+  margin: 0 5px;
+  white-space: nowrap;
+  border-radius: 2px;
+}
+.tianjia .center-box .gs {
+  display: inline-block;
+  min-width: 170px;
+  height: 44px;
+  line-height: 44px;
+  background: #ca141d;
+  border: 1px solid #ca141d;
+  font-size: 18px;
+  color: #fff;
+  margin: 0 5px;
+  white-space: nowrap;
+  border-radius: 2px;
+}
+.tianjia .center-box .center-box-bottom {
+  margin-top: 100px;
 }

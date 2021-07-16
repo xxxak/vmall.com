@@ -71,6 +71,7 @@ $(function () {
 
             $('.add-gowuche').on('click', function () {
                 console.log(1);
+                $('.tianjia').css('display', 'block');
                 addItem(res.id, res.price, $('.num input').val());
             });
         })
@@ -137,5 +138,8 @@ $(function () {
                 .find('input')
                 .val(parseInt($(this).find('input').val()) - 1);
         }
+    });
+    $('.gg').on('click', function () {
+        $('.tianjia').css('display', 'none');
     });
 });

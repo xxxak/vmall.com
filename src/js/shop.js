@@ -27,7 +27,7 @@ $(function () {
                     quantity += parseInt(current[0].num);
                     tempString += ` <li class="item clearfix" data-id="${el.id}">
                     <div>
-                        <input type="checkbox" />
+                        <input type="checkbox" checked />
                         <img src="${picture[0].src}.png" alt="" />
                     </div>
                     <ul class="sub">
@@ -61,7 +61,8 @@ $(function () {
                             return parseInt(el.id) !== parseInt($(this).attr('data-id'));
                         });
                         cookie.set('shop', JSON.stringify(res), 1);
-
+                        console.log(1, $(this).parent().parent().parent().remove());
+                        render();
                         // location.reload();
                     });
 
@@ -88,20 +89,12 @@ $(function () {
                         // location.reload();
                     }
                 });
-                // $('.add').on('click', function () {
-                //     let inputItem = $(this).parent().find('input');
-                //     addItem(inputItem.attr('data-id'), $('.price').attr('data-price'), 1);
-                //     location.reload();
-                // });
-                // $('.reduce').on('click', function () {
-                //     let inputItem = $(this).parent().find('input');
-                //     if (inputItem.val() == 1) {
-                //         alert('no 0');
-                //     } else {
-                //         addItem(inputItem.attr('data-id'), $('.price').attr('data-price'), -1);
-                //         location.reload();
-                //     }
-                // });
+                //checkbox绑定事件
+                $("input[type='checkbox']").on('change', function () {
+                    console.log(1);
+                    render();
+                    // $('.reduce');
+                });
             })
             .catch(function (xhr) {
                 console.log('1', xhr.status);
@@ -141,19 +134,39 @@ $(function () {
         let newnum = 0;
         let newshop = cookie.get('shop');
         newshop = JSON.parse(newshop);
-        newshop.forEach((el, i) => {
-            console.log(el);
-            newtotal += el['price'] * el['num'];
-            newnum += parseInt(el['num']);
-            if (el['id'] == id) {
-                $(that)
-                    .find('li.sum span')
-                    .html(`￥${el['price'] * el['num']}.00`);
-                $(that).find('input[type="text"]').val(`${el['num']}`);
-            }
-        });
+        if (id) {
+            newshop.forEach(el => {
+                console.log(
+                    // $(`li[data-id=${el['id']}]`).find('input[type="checkbox"]'),
+                    $(`li[data-id=${el['id']}]`).find('input[type="checkbox"]').is(':checked')
+                );
+                if ($(`li[data-id=${el['id']}]`).find('input[type="checkbox"]').is(':checked')) {
+                    newtotal += el['price'] * el['num'];
+                    newnum += parseInt(el['num']);
+                }
+
+                if (el['id'] == id) {
+                    // 点击那个商品的总价改变
+                    $(that)
+                        .find('li.sum span')
+                        .html(`￥${el['price'] * el['num']}.00`);
+                    $(that).find('input[type="text"]').val(`${el['num']}`);
+                }
+            });
+        } else {
+            newshop.forEach(el => {
+                if ($(`li[data-id=${el['id']}]`).find('input[type="checkbox"]').is(':checked')) {
+                    newtotal += el['price'] * el['num'];
+                    newnum += parseInt(el['num']);
+                }
+            });
+        }
         $('.totol-price i').html(`￥${newtotal}.00`);
         $('.totol-price em').html(`${newnum}`);
     }
-    // $('.reduce');
 });
+$('.allcheck').on('change', function () {
+    let x = $(this).is(':checked');
+    $("input[type='checkbox']").prop('checked', x);
+});
+console.log($("input[type='checkbox']"));
