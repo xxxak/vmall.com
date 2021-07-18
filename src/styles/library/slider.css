@@ -20,7 +20,6 @@
 }
 .slider span {
   position: absolute;
-  z-index: 198;
   top: 47%;
   font-size: 1.5em;
   cursor: pointer;
@@ -48,7 +47,6 @@
   top: 450px;
   left: 75%;
   transform: translateX(-50%);
-  z-index: 199;
 }
 .slider ul li {
   list-style: none;

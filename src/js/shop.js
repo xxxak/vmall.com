@@ -6,6 +6,7 @@ $(function () {
         shop = JSON.parse(shop);
         console.log(shop);
         let idList = shop.map(el => el.id).join();
+        console.log(idList);
         $.ajax({
             type: 'get',
             url: '../../interface/getItems.php',

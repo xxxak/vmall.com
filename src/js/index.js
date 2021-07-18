@@ -5,18 +5,19 @@ $(function () {
     // console.log(cookie.get(username));
 
     //轮播图
-    console.log($('.slider'));
+    // console.log($('.slider'));
     $('.slider').slider();
-    let jianto = $('.slider span');
-    //  console.log($('.side-bar>ul>li'));
-    $('.side-bar>ul>li').hover(
-        function () {
-            jianto.css('z-index', '99');
-        },
-        function () {
-            jianto.css('z-index', '198');
-        }
-    );
+    // console.log.log($('.main').width());
+    // let jianto = $('.slider span');
+    // //  console.log($('.side-bar>ul>li'));
+    // $('.side-bar>ul>li').hover(
+    //     function () {
+    //         jianto.css('z-index', '99');
+    //     },
+    //     function () {
+    //         jianto.css('z-index', '198');
+    //     }
+    // );
 
     // 公告上下滚动
     let count = 0;
